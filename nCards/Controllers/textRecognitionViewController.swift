@@ -21,7 +21,7 @@ class textRecognitionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detectTexts(image: #imageLiteral(resourceName: "testImage"))
+        detectTexts(image: testImage.image)
     }
     
     override func didReceiveMemoryWarning() {
