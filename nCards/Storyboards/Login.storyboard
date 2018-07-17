@@ -1,7 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxP-4y-zTB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="RMG-cr-Ons">
+            <objects>
+                <viewController id="bxP-4y-zTB" customClass="LoginViewController" customModule="nCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U3x-Kt-dSs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mog-Us-WzQ">
+                                <rect key="frame" x="25" y="50" width="325" height="240"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lsf-9Y-gF9">
+                                        <rect key="frame" x="82" y="55" width="161.5" height="130.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nCards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-0j-5Yp">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="68.5"/>
+                                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="50"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A new way to add your contacts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afn-ZG-xv5">
+                                                <rect key="frame" x="5.5" y="78.5" width="150" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="UqP-yR-ipm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.59215686270000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Lsf-9Y-gF9" firstAttribute="centerY" secondItem="Mog-Us-WzQ" secondAttribute="centerY" id="Owg-J4-YEo"/>
+                                    <constraint firstAttribute="height" constant="240" id="a1t-66-atL"/>
+                                    <constraint firstItem="Lsf-9Y-gF9" firstAttribute="centerX" secondItem="Mog-Us-WzQ" secondAttribute="centerX" id="loJ-2b-bnY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPA-Km-FSN">
+                                <rect key="frame" x="25" y="320" width="325" height="45"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.59215686270000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="maS-7c-fgt"/>
+                                </constraints>
+                                <state key="normal" title="Log in or Register"/>
+                                <connections>
+                                    <action selector="btnLoginTapped:" destination="bxP-4y-zTB" eventType="touchUpInside" id="Sy4-Lw-I6f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43797092450000003" blue="0.46782787409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fKD-bS-n7X" firstAttribute="trailing" secondItem="OPA-Km-FSN" secondAttribute="trailing" constant="25" id="6zK-Qh-0Aa"/>
+                            <constraint firstItem="Mog-Us-WzQ" firstAttribute="top" secondItem="fKD-bS-n7X" secondAttribute="top" constant="30" id="AtP-bO-MdJ"/>
+                            <constraint firstItem="OPA-Km-FSN" firstAttribute="leading" secondItem="fKD-bS-n7X" secondAttribute="leading" constant="25" id="KMV-gf-0hv"/>
+                            <constraint firstItem="OPA-Km-FSN" firstAttribute="top" secondItem="Mog-Us-WzQ" secondAttribute="bottom" constant="30" id="QlK-MK-zg0"/>
+                            <constraint firstItem="fKD-bS-n7X" firstAttribute="trailing" secondItem="Mog-Us-WzQ" secondAttribute="trailing" constant="25" id="kv0-gK-Qcz"/>
+                            <constraint firstItem="Mog-Us-WzQ" firstAttribute="leading" secondItem="fKD-bS-n7X" secondAttribute="leading" constant="25" id="pdt-MD-FeU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fKD-bS-n7X"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="OPA-Km-FSN" id="2n3-PS-ShJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMB-WV-2UW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="141"/>
+        </scene>
+    </scenes>
 </document>

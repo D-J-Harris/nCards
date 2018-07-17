@@ -16,6 +16,7 @@
 		0B5E392420FD9D2C00F01B76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E392320FD9D2C00F01B76 /* Login.storyboard */; };
 		0B5E392720FE88E100F01B76 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392620FE88E100F01B76 /* Contact.swift */; };
 		376952C702DCCE7DD32BC758 /* Pods_nCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */; };
+		5F64BE7720FE90DD00D06103 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64BE7620FE90DD00D06103 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0B5E391A20FD6EE900F01B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B5E392320FD9D2C00F01B76 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0B5E392620FE88E100F01B76 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5F64BE7620FE90DD00D06103 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C975F04EDF4EBC925ACBCFC6 /* Pods-nCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D067CDC91A45681D04EBB2 /* Pods-nCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0B5E390A20FD6DC300F01B76 /* ViewController.swift */,
+				5F64BE7620FE90DD00D06103 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F64BE7720FE90DD00D06103 /* LoginViewController.swift in Sources */,
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
 				0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */,
 				0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */,
