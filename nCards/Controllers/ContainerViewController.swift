@@ -32,7 +32,7 @@ class ContainerViewController: UIViewController {
 		var middleFrame: CGRect = middle.view.frame
 		middleFrame.origin.x = self.view.frame.width
 		middle.view.frame = middleFrame
-		
+
 		let right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! LocationsViewControllers
 		self.addChildViewController(right)
 		self.scroll.addSubview(right.view)
@@ -43,5 +43,6 @@ class ContainerViewController: UIViewController {
 		right.view.frame = rightFrame
 		
 		self.scroll.contentSize = CGSize(width: (self.view.frame.width) * 3, height: (self.view.frame.height))
+		self.scroll.contentOffset = CGPoint(x: self.view.frame.width, y: self.view.frame.height)
 	}
 }
