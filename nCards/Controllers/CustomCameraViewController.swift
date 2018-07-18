@@ -97,6 +97,13 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
 		if let imageData = photo.fileDataRepresentation() {
 			self.image = UIImage(data: imageData)
 			// HERE GOES CODE TO OTHER VIEWS
+            
+            let textRecognition = TextRecognition()
+            textRecognition.detectTexts(image: self.image) { resultsText in
+                print(resultsText)
+            }
+            
+            
 		}
 	}
 }

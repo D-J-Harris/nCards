@@ -23,7 +23,7 @@
 		5F4A1DF220FEE26D00EF1830 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A1DF120FEE26D00EF1830 /* UserService.swift */; };
 		5F4A1DF420FEF7E100EF1830 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A1DF320FEF7E100EF1830 /* Storyboard+Utility.swift */; };
 		5F64BE7720FE90DD00D06103 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64BE7620FE90DD00D06103 /* LoginViewController.swift */; };
-		BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */; };
+		BE849FC720FFD3FF002F084E /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE849FC620FFD3FF002F084E /* TextRecognition.swift */; };
 		BECC9CE820FFC455002387ED /* ContactCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC9CE720FFC455002387ED /* ContactCard.storyboard */; };
 		BECC9CEA20FFC483002387ED /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC9CE920FFC483002387ED /* Locations.storyboard */; };
 /* End PBXBuildFile section */
@@ -47,7 +47,7 @@
 		5F4A1DF320FEF7E100EF1830 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "nCards/Controllers/Storyboard+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		5F64BE7620FE90DD00D06103 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textRecognitionViewController.swift; sourceTree = "<group>"; };
+		BE849FC620FFD3FF002F084E /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextRecognition.swift; path = nCards/Storyboards/TextRecognition.swift; sourceTree = SOURCE_ROOT; };
 		BECC9CE720FFC455002387ED /* ContactCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactCard.storyboard; sourceTree = "<group>"; };
 		BECC9CE920FFC483002387ED /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 		C975F04EDF4EBC925ACBCFC6 /* Pods-nCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 		0B5E391E20FD9C3800F01B76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */,
 				0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */,
 				0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */,
 				0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */,
@@ -142,6 +141,7 @@
 		0B5E392020FD9C5E00F01B76 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BE849FC620FFD3FF002F084E /* TextRecognition.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -339,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
-				BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */,
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
 				5F3C98B020FEA2DC00AC6C16 /* ContactFillViewController.swift in Sources */,
@@ -348,6 +347,7 @@
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
 				5F4A1DF420FEF7E100EF1830 /* Storyboard+Utility.swift in Sources */,
 				0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */,
+				BE849FC720FFD3FF002F084E /* TextRecognition.swift in Sources */,
 				0B5E392F20FE900500F01B76 /* ContactCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
