@@ -37,19 +37,29 @@ extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
+            print("ERROR WEIRD")
             return
         }
         
-        // 1
         guard let user = authDataResult?.user
             else { return }
         
-        // 2
-        let userRef = Database.database().reference().child("users").child(user.uid)
+//        let userRef = Database.database().reference().child("users").child(user.uid)
         
-        // 3
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // 4 retrieve user data from snapshot
-        })
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                
+                Contact.setCurrent(user, writeToUserDefaults: true)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+                
+            } else {
+                // handle new user
+                self.performSegue(withIdentifier: "toContactFill", sender: self)
+            }
+        }
     }
 }

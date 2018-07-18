@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
-class Contact {
+class Contact: Codable {
     
     var name: String = ""
     var uid: String = ""
@@ -42,5 +42,40 @@ class Contact {
     }
     
     
-	
+    // MARK: - Singleton
+    
+    // 1
+    private static var _current: Contact?
+    
+    // 2
+    static var current: Contact {
+        // 3
+        guard let currentUser = _current else {
+            fatalError("Error: current user doesn't exist")
+        }
+        
+        // 4
+        return currentUser
+    }
+    
+    // MARK: - Class Methods
+    
+    // 5
+    static func setCurrent(_ user: Contact) {
+        _current = user
+    }
+    
+    // 1
+    static func setCurrent(_ user: Contact, writeToUserDefaults: Bool = false) {
+        // 2
+        if writeToUserDefaults {
+            // 3
+            if let data = try? JSONEncoder().encode(user) {
+                // 4
+                UserDefaults.standard.set(data, forKey: user.uid)
+            }
+        }
+        
+        _current = user
+    }
 }
