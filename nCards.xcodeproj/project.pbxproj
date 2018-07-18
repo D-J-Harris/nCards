@@ -106,7 +106,6 @@
 		0B5E391E20FD9C3800F01B76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B5E390A20FD6DC300F01B76 /* ViewController.swift */,
 				BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */,
 				0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */,
 				0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */,
@@ -321,7 +320,6 @@
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
-				0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */,
 				BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */,
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
@@ -472,13 +470,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GULLB495Q9;
+				DEVELOPMENT_TEAM = AL84MLV79J;
 				INFOPLIST_FILE = "$(SRCROOT)/nCards/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -491,13 +489,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GULLB495Q9;
+				DEVELOPMENT_TEAM = AL84MLV79J;
 				INFOPLIST_FILE = "$(SRCROOT)/nCards/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
