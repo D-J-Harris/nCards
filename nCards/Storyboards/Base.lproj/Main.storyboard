@@ -40,6 +40,9 @@
                                     <constraint firstAttribute="width" constant="58" id="jXY-ie-Aw0"/>
                                 </constraints>
                                 <state key="normal" image="personal-100"/>
+                                <connections>
+                                    <action selector="personalContactCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOX-KJ-Xgf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hch-4R-vbb">
                                 <rect key="frame" x="301" y="589" width="58" height="58"/>
@@ -48,6 +51,9 @@
                                     <constraint firstAttribute="height" constant="58" id="edf-IZ-UMM"/>
                                 </constraints>
                                 <state key="normal" image="contacts-100"/>
+                                <connections>
+                                    <action selector="locationsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F48-6i-yn8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKA-c7-yRB">
                                 <rect key="frame" x="140" y="547" width="95" height="90"/>

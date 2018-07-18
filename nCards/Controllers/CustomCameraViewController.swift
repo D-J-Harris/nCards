@@ -12,16 +12,13 @@ import AVFoundation
 class CustomCameraViewController: UIViewController {
 	// MARK: Properties
 	@IBOutlet weak var cameraButton: UIButton!
-	var captureSession = AVCaptureSession()
 	
+	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
 	var frontCamera: AVCaptureDevice?
 	var currentDevice: AVCaptureDevice?
-	
 	var photoOutput: AVCapturePhotoOutput?
-	
 	var cameraPreviewLayer:AVCaptureVideoPreviewLayer?
-	
 	var image: UIImage?
 	
 	// MARK: Methods
@@ -85,6 +82,14 @@ class CustomCameraViewController: UIViewController {
 		captureSession.stopRunning()
 	}
 	
+	// MARK: Transitions between views by scrolling 
+	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
+		ContainerViewController.scrollToContactCardView()
+	}
+	
+	@IBAction func locationsButtonTapped(_ sender: UIButton) {
+		ContainerViewController.scrollToLocationsView()
+	}
 }
 
 extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {

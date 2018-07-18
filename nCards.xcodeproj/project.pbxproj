@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E390820FD6DC300F01B76 /* AppDelegate.swift */; };
-		0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E390A20FD6DC300F01B76 /* ViewController.swift */; };
 		0B5E390E20FD6DC300F01B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390C20FD6DC300F01B76 /* Main.storyboard */; };
 		0B5E391020FD6DC500F01B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390F20FD6DC500F01B76 /* Assets.xcassets */; };
 		0B5E391320FD6DC500F01B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E391120FD6DC500F01B76 /* LaunchScreen.storyboard */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		0B5E390520FD6DC300F01B76 /* nCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5E390820FD6DC300F01B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B5E390A20FD6DC300F01B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B5E390D20FD6DC300F01B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B5E390F20FD6DC500F01B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B5E391220FD6DC500F01B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		0B5E391E20FD9C3800F01B76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B5E390A20FD6DC300F01B76 /* ViewController.swift */,
 				0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */,
 				0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */,
 				0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */,
@@ -320,7 +317,6 @@
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
-				0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */,
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
 				0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */,

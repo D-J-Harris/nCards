@@ -18,7 +18,9 @@ class ContainerViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		scroll.showsHorizontalScrollIndicator = false
+		
 		let left = self.storyboard?.instantiateViewController(withIdentifier: "left") as! ContactCardViewController
 		self.addChildViewController(left)
 		self.scroll.addSubview(left.view)
@@ -44,5 +46,16 @@ class ContainerViewController: UIViewController {
 		
 		self.scroll.contentSize = CGSize(width: (self.view.frame.width) * 3, height: (self.view.frame.height))
 		self.scroll.contentOffset = CGPoint(x: self.view.frame.width, y:0)
+	}
+	
+	static func scrollToContactCardView() {
+		//self.scroll.contentOffset = CGPoint(x: 0, y:0)
+		print("container recieved contact card tap")
+
+	}
+	
+	static func scrollToLocationsView() {
+		//self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
+		print("container recieved locations tap")
 	}
 }
