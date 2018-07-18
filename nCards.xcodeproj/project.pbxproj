@@ -106,15 +106,12 @@
 		0B5E391E20FD9C3800F01B76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				0B5E390A20FD6DC300F01B76 /* ViewController.swift */,
 				BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */,
-=======
 				0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */,
 				0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */,
 				0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */,
 				0B5E393020FE904300F01B76 /* LocationsViewController.swift */,
->>>>>>> origin/JP
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -324,13 +321,10 @@
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
-<<<<<<< HEAD
 				0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */,
 				BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */,
-=======
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
->>>>>>> origin/JP
 				0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */,
 				0B5E392F20FE900500F01B76 /* ContactCardViewController.swift in Sources */,
 			);
@@ -484,11 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
->>>>>>> origin/JP
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,11 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
->>>>>>> origin/JP
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
