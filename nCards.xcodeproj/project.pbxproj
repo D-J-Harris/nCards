@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E390820FD6DC300F01B76 /* AppDelegate.swift */; };
-		0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E390A20FD6DC300F01B76 /* ViewController.swift */; };
 		0B5E390E20FD6DC300F01B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390C20FD6DC300F01B76 /* Main.storyboard */; };
 		0B5E391020FD6DC500F01B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390F20FD6DC500F01B76 /* Assets.xcassets */; };
 		0B5E391320FD6DC500F01B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E391120FD6DC500F01B76 /* LaunchScreen.storyboard */; };
 		0B5E391B20FD6EE900F01B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E391A20FD6EE900F01B76 /* GoogleService-Info.plist */; };
 		0B5E392420FD9D2C00F01B76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E392320FD9D2C00F01B76 /* Login.storyboard */; };
 		0B5E392720FE88E100F01B76 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392620FE88E100F01B76 /* Contact.swift */; };
+		0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */; };
+		0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */; };
+		0B5E392F20FE900500F01B76 /* ContactCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */; };
+		0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E393020FE904300F01B76 /* LocationsViewController.swift */; };
 		376952C702DCCE7DD32BC758 /* Pods_nCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */; };
 		BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -22,7 +25,6 @@
 /* Begin PBXFileReference section */
 		0B5E390520FD6DC300F01B76 /* nCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5E390820FD6DC300F01B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B5E390A20FD6DC300F01B76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B5E390D20FD6DC300F01B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B5E390F20FD6DC500F01B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B5E391220FD6DC500F01B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +32,10 @@
 		0B5E391A20FD6EE900F01B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B5E392320FD9D2C00F01B76 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0B5E392620FE88E100F01B76 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
+		0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewController.swift; sourceTree = "<group>"; };
+		0B5E393020FE904300F01B76 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textRecognitionViewController.swift; sourceTree = "<group>"; };
 		C975F04EDF4EBC925ACBCFC6 /* Pods-nCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,8 +106,15 @@
 		0B5E391E20FD9C3800F01B76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				0B5E390A20FD6DC300F01B76 /* ViewController.swift */,
 				BE2B866F20FE8EAA00D5DEC5 /* textRecognitionViewController.swift */,
+=======
+				0B5E392A20FE8FA600F01B76 /* ContainerViewController.swift */,
+				0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */,
+				0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */,
+				0B5E393020FE904300F01B76 /* LocationsViewController.swift */,
+>>>>>>> origin/JP
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,10 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
 				0B5E392720FE88E100F01B76 /* Contact.swift in Sources */,
+<<<<<<< HEAD
 				0B5E390B20FD6DC300F01B76 /* ViewController.swift in Sources */,
 				BE2B867020FE8EAA00D5DEC5 /* textRecognitionViewController.swift in Sources */,
+=======
+				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
+				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
+>>>>>>> origin/JP
 				0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */,
+				0B5E392F20FE900500F01B76 /* ContactCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,12 +478,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULLB495Q9;
 				INFOPLIST_FILE = "$(SRCROOT)/nCards/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
+>>>>>>> origin/JP
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,12 +501,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULLB495Q9;
 				INFOPLIST_FILE = "$(SRCROOT)/nCards/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.nCards;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.juanpabloramos.nCardsv1;
+>>>>>>> origin/JP
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
