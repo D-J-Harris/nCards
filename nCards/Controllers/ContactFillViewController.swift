@@ -17,8 +17,10 @@ class ContactFillViewController: UIViewController {
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var currentPositionTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func btnNextTapped(_ sender: Any) {
@@ -43,3 +45,4 @@ class ContactFillViewController: UIViewController {
         }
     }
 }
+
