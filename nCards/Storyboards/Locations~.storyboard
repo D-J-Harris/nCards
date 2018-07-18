@@ -100,6 +100,21 @@
             </objects>
             <point key="canvasLocation" x="81" y="800"/>
         </scene>
+        <!--Locations View Controllers-->
+        <scene sceneID="NDd-8Q-zjM">
+            <objects>
+                <viewController storyboardIdentifier="right" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RuX-Pv-iAv" customClass="LocationsViewControllers" customModule="nCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y71-6h-Y5M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.78039215689999997" green="0.92941176469999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Csf-Oc-kyW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jL2-62-DcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="34"/>
+        </scene>
         <!--left-->
         <scene sceneID="wrR-kq-pdb">
             <objects>
@@ -107,14 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2A-Oo-oRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-780" y="34"/>
-        </scene>
-        <!--right-->
-        <scene sceneID="lrR-9t-q85">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="right" storyboardName="Locations" referencedIdentifier="right" id="FeN-GJ-dhX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLZ-TY-cpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="834" y="34"/>
         </scene>
     </scenes>
     <resources>
