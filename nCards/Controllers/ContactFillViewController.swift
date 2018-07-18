@@ -19,7 +19,6 @@ class ContactFillViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func btnNextTapped(_ sender: Any) {
@@ -32,10 +31,10 @@ class ContactFillViewController: UIViewController {
         UserService.create(firUser, phoneNumber: phone, company: company!, currentPosition: currentPosition!) { (user) in
             guard let user = user else { return }
             
-            Contact.setCurrent(user)
+            Contact.setCurrent(user, writeToUserDefaults: true)
             }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Main", bundle: .main) //change this back
         if let initialViewController = storyboard.instantiateInitialViewController() {
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
@@ -43,6 +42,4 @@ class ContactFillViewController: UIViewController {
             print("not happening")
         }
     }
-    
-    
 }

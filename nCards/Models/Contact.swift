@@ -34,9 +34,8 @@ class Contact: Codable {
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
-            else { return nil }
-
+        let username = dict["uid"] as? String
+        else { return nil }
         self.uid = snapshot.key
         self.username = username
     }
@@ -58,13 +57,6 @@ class Contact: Codable {
         return currentUser
     }
     
-    // MARK: - Class Methods
-    
-    // 5
-    static func setCurrent(_ user: Contact) {
-        _current = user
-    }
-    
     // 1
     static func setCurrent(_ user: Contact, writeToUserDefaults: Bool = false) {
         // 2
@@ -72,7 +64,7 @@ class Contact: Codable {
             // 3
             if let data = try? JSONEncoder().encode(user) {
                 // 4
-                UserDefaults.standard.set(data, forKey: user.uid)
+                UserDefaults.standard.set(data, forKey: "currentUser")
             }
         }
         

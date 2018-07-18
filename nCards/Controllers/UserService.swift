@@ -25,7 +25,8 @@ struct UserService {
     static func create(_ firUser: FIRUser, phoneNumber: String, company: String, currentPosition: String ,completion: @escaping (Contact?) -> Void) {
         let userCardInfo = ["phone": phoneNumber,
                         "company": company,
-                        "currentPosition": currentPosition]
+                        "currentPosition": currentPosition,
+                        "uid": firUser.uid]
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
         
@@ -43,4 +44,3 @@ struct UserService {
         }
     }
 }
-

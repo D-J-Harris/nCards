@@ -34,14 +34,14 @@ class LoginViewController: UIViewController {
     }
 }
 extension LoginViewController: FUIAuthDelegate {
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+    func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
             print("ERROR WEIRD")
             return
         }
         
-        guard let user = authDataResult?.user
+        guard let user = user
             else { return }
         
 //        let userRef = Database.database().reference().child("users").child(user.uid)
