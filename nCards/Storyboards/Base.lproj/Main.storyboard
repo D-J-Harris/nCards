@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contact Card View Controller-->
-        <scene sceneID="PKK-kF-MP6">
-            <objects>
-                <viewController storyboardIdentifier="left" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yoa-7L-Lwa" customClass="ContactCardViewController" customModule="nCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Clz-YP-rlz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98424042219999996" green="1" blue="0.67872466249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="hDE-3M-NsX"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-hs-Bwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-780" y="34"/>
-        </scene>
         <!--Custom Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -115,18 +100,19 @@
             </objects>
             <point key="canvasLocation" x="81" y="800"/>
         </scene>
-        <!--Locations View Controllers-->
-        <scene sceneID="NDd-8Q-zjM">
+        <!--left-->
+        <scene sceneID="ZeJ-Ws-Tyn">
             <objects>
-                <viewController storyboardIdentifier="right" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RuX-Pv-iAv" customClass="LocationsViewControllers" customModule="nCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y71-6h-Y5M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.92941176469999998" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Csf-Oc-kyW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jL2-62-DcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="left" storyboardName="ContactCard" referencedIdentifier="left" id="yio-bR-jwi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfn-Kb-qVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="34"/>
+        </scene>
+        <!--right-->
+        <scene sceneID="BuB-U9-TxX">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="right" storyboardName="Locations" referencedIdentifier="right" id="qpV-5G-EGw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyj-Ue-7he" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834" y="34"/>
         </scene>

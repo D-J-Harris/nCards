@@ -18,6 +18,8 @@
 		0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */; };
 		0B5E392F20FE900500F01B76 /* ContactCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */; };
 		0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E393020FE904300F01B76 /* LocationsViewController.swift */; };
+		0B938C0B20FFB99D005EB6EF /* ContactCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B938C0A20FFB99D005EB6EF /* ContactCard.storyboard */; };
+		0B938C0D20FFB9E7005EB6EF /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B938C0C20FFB9E7005EB6EF /* Locations.storyboard */; };
 		376952C702DCCE7DD32BC758 /* Pods_nCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		0B5E392C20FE8FFA00F01B76 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
 		0B5E392E20FE900500F01B76 /* ContactCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewController.swift; sourceTree = "<group>"; };
 		0B5E393020FE904300F01B76 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		0B938C0A20FFB99D005EB6EF /* ContactCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactCard.storyboard; sourceTree = "<group>"; };
+		0B938C0C20FFB9E7005EB6EF /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 		7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C975F04EDF4EBC925ACBCFC6 /* Pods-nCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D067CDC91A45681D04EBB2 /* Pods-nCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-nCards/Pods-nCards.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		0B5E392520FD9D4200F01B76 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				0B938C0C20FFB9E7005EB6EF /* Locations.storyboard */,
+				0B938C0A20FFB99D005EB6EF /* ContactCard.storyboard */,
 				0B5E390C20FD6DC300F01B76 /* Main.storyboard */,
 				0B5E392320FD9D2C00F01B76 /* Login.storyboard */,
 				0B5E391120FD6DC500F01B76 /* LaunchScreen.storyboard */,
@@ -232,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5E391320FD6DC500F01B76 /* LaunchScreen.storyboard in Resources */,
+				0B938C0B20FFB99D005EB6EF /* ContactCard.storyboard in Resources */,
 				0B5E391B20FD6EE900F01B76 /* GoogleService-Info.plist in Resources */,
 				0B5E391020FD6DC500F01B76 /* Assets.xcassets in Resources */,
+				0B938C0D20FFB9E7005EB6EF /* Locations.storyboard in Resources */,
 				0B5E392420FD9D2C00F01B76 /* Login.storyboard in Resources */,
 				0B5E390E20FD6DC300F01B76 /* Main.storyboard in Resources */,
 			);
