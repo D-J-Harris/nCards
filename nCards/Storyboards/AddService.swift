@@ -17,8 +17,7 @@ struct AddService {
         let userCardInfo = ["phone": contact.phone,
                             "email": contact.email,
                             "name": contact.name]
-        let randomIntAsString = String(arc4random())
-        let ref = Database.database().reference().child("users").child(currentUID).child("contacts").child(randomIntAsString) //better way than random string?
+        let ref = Database.database().reference().child("users").child(currentUID).child("contacts").child(contact.uid) //better way than random string?
         
         //if user there, alert user exists //extension very hard as we can't tell without looping over current users
 

@@ -93,6 +93,7 @@ class CustomCameraViewController: UIViewController {
 }
 
 extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
+    //potentially return new contact here
 	func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
 		//take photo
         if let imageData = photo.fileDataRepresentation() {
@@ -103,16 +104,20 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
             textRecognition.detectTexts(image: self.image) { resultsText in
                 print(resultsText)
                 let output: [String] = textRecognition.linguisticTagger(resultsText)
-                self.addContactToFirebase(output) //add to firebase under currentUser
+                //add to firebase under currentUser
+                let newContact = self.addNewContactToFirebase(output)
             }
 		}
 	}
 }
 
 extension CustomCameraViewController {
-    func addContactToFirebase(_ contactInfo: [String]) {
-        let newContact = Contact(uid: "", username: "", name: contactInfo[0], email: contactInfo[1], organization: "", phone: contactInfo[2], address: "", geoLocation: 0, currentPosition: "")
+    func addNewContactToFirebase(_ contactInfo: [String]) -> Contact {
+        //random int as String to identify contacts within current user on Firebase (makeshift uid)
+        let randomIntAsString = String(arc4random())
+        let newContact = Contact(uid: randomIntAsString, username: "", name: contactInfo[0], email: contactInfo[1], organization: "", phone: contactInfo[2], address: "", geoLocation: 0, currentPosition: "")
         
         AddService.addContact(newContact)
+        return newContact
     }
 }
