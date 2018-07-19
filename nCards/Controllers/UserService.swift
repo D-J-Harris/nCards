@@ -27,7 +27,7 @@ struct UserService {
                         "company": company,
                         "currentPosition": currentPosition,
                         "uid": firUser.uid,
-                        "contacts": "values"] //added this reference
+                        "contacts": "No contacts yet"] //added this reference
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
         
