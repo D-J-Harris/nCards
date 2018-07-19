@@ -12,10 +12,10 @@ import AVFoundation
 class CustomCameraViewController: UIViewController {
 	// MARK: Properties
 	@IBOutlet weak var cameraButton: UIButton!
-
 	@IBOutlet weak var loadingScreen: UIView!
-
 	@IBOutlet weak var focusRectangle: UIView!
+    @IBOutlet weak var promptLabel: UILabel!
+    
 
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
@@ -28,8 +28,10 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		focusRectangle.layer.borderColor = UIColor.yellow.cgColor
+		focusRectangle.layer.borderColor = UIColor.darkGray.cgColor
+        focusRectangle.layer.cornerRadius = 8
 		focusRectangle.layer.borderWidth = 1.5
+        promptLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
 		setupCaptureSession()
 		setupDevice()
 		setupInputOutput()
@@ -126,7 +128,7 @@ extension CustomCameraViewController {
     func addNewContactToFirebase(_ contactInfo: [String]) -> Contact {
         //random int as String to identify contacts within current user on Firebase (makeshift uid)
         let randomIntAsString = String(arc4random())
-        let newContact = Contact(uid: randomIntAsString, username: "", name: contactInfo[0], email: contactInfo[1], organization: "", phone: contactInfo[2], address: "", geoLocation: 0, currentPosition: "")
+        let newContact = Contact(uid: randomIntAsString, username: "", name: contactInfo[0], email: contactInfo[1], phone: contactInfo[2])
 
         AddService.addContact(newContact)
         return newContact
