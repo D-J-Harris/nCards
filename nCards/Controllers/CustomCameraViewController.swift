@@ -24,11 +24,11 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		setupCaptureSession()
-//		setupDevice()
-//		setupInputOutput()
-//		setupPreviewLayer()
-//		captureSession.startRunning()
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        captureSession.startRunning()
 	}
 
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
