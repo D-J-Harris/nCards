@@ -37,16 +37,34 @@ class CustomCameraViewController: UIViewController {
 		captureSession.startRunning()
 	}
 
+	// MARK: Camera button code and segue
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
-		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
+			self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
 			self.loadingScreen.alpha = 0
+		})
+		
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+		
+		switch identifier {
+		case "toContactAddEdit":
+			print("segue")
+		default:
+			print("Unexpected segue identifier")
 		}
-        
+	}
+	
+	@IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+		
 	}
 
+	// MARK: Camera code
 	func setupCaptureSession() {
 		captureSession.sessionPreset = AVCaptureSession.Preset.photo
 	}
@@ -93,7 +111,7 @@ class CustomCameraViewController: UIViewController {
 		captureSession.stopRunning()
 	}
 
-	// MARK: Transitions between views by scrolling
+	// MARK: Transitions between views by tapping buttons
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
 		ContainerViewController().scrollToContactCardView()
 	}
