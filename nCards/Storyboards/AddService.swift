@@ -17,8 +17,8 @@ struct AddService {
         let userCardInfo = ["phone": contact.phone,
                             "email": contact.email,
                             "name": contact.name]
-        
-        let ref = Database.database().reference().child("users").child(currentUID).child("contacts").child(String(arc4random())) //better way than random string?
+        let randomIntAsString = String(arc4random())
+        let ref = Database.database().reference().child("users").child(currentUID).child("contacts").child(randomIntAsString) //better way than random string?
         
         //if user there, alert user exists //extension very hard as we can't tell without looping over current users
 
@@ -28,5 +28,22 @@ struct AddService {
                 return
             }
         }
+    }
+    
+    static func fetchContact(_ currentContact: Contact, contactDBID IDReference: String) -> [String: Any] {
+        var output = [String:String]() //empty dictionary for contactInfo
+        
+        let currentUID = currentContact.uid
+        let ref = Database.database().reference().child("users/\(currentUID)/contacts/\(IDReference)")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let infoDict = snapshot.value as? [String:String]
+                else {
+                    return
+            }
+            output = infoDict
+        })
+        print("infoDict======\(output)")
+        return output
     }
 }
