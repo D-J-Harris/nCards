@@ -12,7 +12,7 @@ import AVFoundation
 class CustomCameraViewController: UIViewController {
 	// MARK: Properties
 	@IBOutlet weak var cameraButton: UIButton!
-	
+
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
 	var frontCamera: AVCaptureDevice?
@@ -20,30 +20,30 @@ class CustomCameraViewController: UIViewController {
 	var photoOutput: AVCapturePhotoOutput?
 	var cameraPreviewLayer:AVCaptureVideoPreviewLayer?
 	var image: UIImage?
-	
+
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setupCaptureSession()
-		setupDevice()
-		setupInputOutput()
-		setupPreviewLayer()
-		captureSession.startRunning()
+//		setupCaptureSession()
+//		setupDevice()
+//		setupInputOutput()
+//		setupPreviewLayer()
+//		captureSession.startRunning()
 	}
-	
+
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 	}
-	
+
 	func setupCaptureSession() {
 		captureSession.sessionPreset = AVCaptureSession.Preset.photo
 	}
-	
+
 	func setupDevice() {
 		let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
 		let devices = deviceDiscoverySession.devices
-		
+
 		for device in devices {
 			if device.position == AVCaptureDevice.Position.back {
 				backCamera = device
@@ -53,40 +53,40 @@ class CustomCameraViewController: UIViewController {
 		}
 		currentDevice = backCamera
 	}
-	
+
 	func setupInputOutput() {
 		do {
-			
+
 			let captureDeviceInput = try AVCaptureDeviceInput(device: currentDevice!)
 			captureSession.addInput(captureDeviceInput)
 			photoOutput = AVCapturePhotoOutput()
 			photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
 			captureSession.addOutput(photoOutput!)
-			
-			
+
+
 		} catch {
 			print(error)
 		}
 	}
-	
+
 	func setupPreviewLayer() {
 		self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
 		self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
 		self.cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
 		self.cameraPreviewLayer?.frame = view.frame
-		
+
 		self.view.layer.insertSublayer(self.cameraPreviewLayer!, at: 0)
 	}
-	
+
 	func startRunningCaptureSession() {
 		captureSession.stopRunning()
 	}
-	
-	// MARK: Transitions between views by scrolling 
+
+	// MARK: Transitions between views by scrolling
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
 		ContainerViewController.scrollToContactCardView()
 	}
-	
+
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
 		ContainerViewController.scrollToLocationsView()
 	}
@@ -97,20 +97,14 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
 		if let imageData = photo.fileDataRepresentation() {
 			self.image = UIImage(data: imageData)
 			// HERE GOES CODE TO OTHER VIEWS
-            
+
             let textRecognition = TextRecognition()
             textRecognition.detectTexts(image: self.image) { resultsText in
                 print(resultsText)
                 textRecognition.linguisticTagger(resultsText)
             }
-            
-            
+
+
 		}
 	}
 }
-
-
-
-
-
-
