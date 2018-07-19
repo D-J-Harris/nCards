@@ -13,6 +13,8 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Properties
 	@IBOutlet weak var cameraButton: UIButton!
 	
+	@IBOutlet weak var loadingScreen: UIView!
+	
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
 	var frontCamera: AVCaptureDevice?
@@ -34,6 +36,10 @@ class CustomCameraViewController: UIViewController {
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
+		loadingScreen.alpha = 1
+		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+			self.loadingScreen.alpha = 0
+		}
 	}
 	
 	func setupCaptureSession() {
@@ -84,11 +90,11 @@ class CustomCameraViewController: UIViewController {
 	
 	// MARK: Transitions between views by scrolling 
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
-		ContainerViewController.scrollToContactCardView()
+		ContainerViewController().scrollToContactCardView()
 	}
 	
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
-		ContainerViewController.scrollToLocationsView()
+		ContainerViewController().scrollToLocationsView()
 	}
 }
 

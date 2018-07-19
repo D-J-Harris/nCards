@@ -51,20 +51,29 @@
                                     <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5Q-S4-DRR"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dro-z7-zqP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="9jM-ym-PX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7G0-fQ-Ary"/>
+                            <constraint firstItem="Dro-z7-zqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7cI-uv-Upp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RKA-c7-yRB" secondAttribute="bottom" constant="30" id="Ilo-VS-Lpv"/>
+                            <constraint firstItem="Dro-z7-zqP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="REv-0f-Qp3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hch-4R-vbb" secondAttribute="trailing" constant="16" id="RX1-TU-YvN"/>
                             <constraint firstItem="RKA-c7-yRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAM-Ku-4PU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hch-4R-vbb" secondAttribute="bottom" constant="20" id="e36-Pa-XWK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9jM-ym-PX9" secondAttribute="bottom" constant="20" id="r9N-mp-OEe"/>
+                            <constraint firstAttribute="trailing" secondItem="Dro-z7-zqP" secondAttribute="trailing" id="v8r-UP-cGn"/>
+                            <constraint firstAttribute="bottom" secondItem="Dro-z7-zqP" secondAttribute="bottom" id="vfu-Jp-KdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="RKA-c7-yRB" id="ln3-Dj-vzV"/>
+                        <outlet property="loadingScreen" destination="Dro-z7-zqP" id="m3A-g5-dN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
