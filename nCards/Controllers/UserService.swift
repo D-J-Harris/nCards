@@ -26,7 +26,8 @@ struct UserService {
         let userCardInfo = ["phone": phoneNumber,
                         "company": company,
                         "currentPosition": currentPosition,
-                        "uid": firUser.uid]
+                        "uid": firUser.uid,
+                        "contacts": "No contacts yet"] //added this reference
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
         

@@ -19,8 +19,9 @@ class Contact: Codable {
     var address: String = ""
     var geoLocation: Int = 0
     var username: String = ""
+    var currentPosition: String = ""
     
-    init(uid: String, username: String, name: String, email: String, organization: String, phone: String, address: String, geoLocation: Int) {
+    init(uid: String, username: String, name: String, email: String, organization: String, phone: String, address: String, geoLocation: Int, currentPosition: String) {
         
         self.name = name
         self.email = email
@@ -30,6 +31,7 @@ class Contact: Codable {
         self.geoLocation = geoLocation
         self.username = username
         self.uid = uid
+        self.currentPosition = currentPosition
     }
     
     init?(snapshot: DataSnapshot) {
@@ -40,30 +42,22 @@ class Contact: Codable {
         self.username = username
     }
     
-    
-    // MARK: - Singleton
-    
-    // 1
     private static var _current: Contact?
     
-    // 2
     static var current: Contact {
-        // 3
         guard let currentUser = _current else {
             fatalError("Error: current user doesn't exist")
         }
-        
-        // 4
+ 
         return currentUser
     }
     
-    // 1
+    
     static func setCurrent(_ user: Contact, writeToUserDefaults: Bool = false) {
-        // 2
+
         if writeToUserDefaults {
-            // 3
+
             if let data = try? JSONEncoder().encode(user) {
-                // 4
                 UserDefaults.standard.set(data, forKey: "currentUser")
             }
         }
