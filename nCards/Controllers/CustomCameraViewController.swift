@@ -51,17 +51,6 @@ class CustomCameraViewController: UIViewController {
 
 	}
 
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		guard let identifier = segue.identifier else { return }
-
-		switch identifier {
-		case "toContactAddEdit":
-			print("segue")
-		default:
-			print("Unexpected segue identifier")
-		}
-	}
-
 	@IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
 
 	}

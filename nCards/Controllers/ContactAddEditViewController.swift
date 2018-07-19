@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Contacts
 
 class ContactAddEditViewController: UIViewController {
@@ -30,9 +31,9 @@ class ContactAddEditViewController: UIViewController {
 		tap.cancelsTouchesInView = false
 		
 		view.addGestureRecognizer(tap)
-		nameTextField.text = "John Doe"
-		phoneNumberTextField.text = "(43) 7568-3455"
-		emailTextField.text = "john.doe@company.com"
+		nameTextField.text = newContactCreated.name
+		phoneNumberTextField.text = newContactCreated.phone
+		emailTextField.text = newContactCreated.email
 	}
 	
 	//Calls this function when the tap is recognized.
@@ -42,25 +43,22 @@ class ContactAddEditViewController: UIViewController {
 	}
 	
 	func setNewContact() {
-		//fetchContactFromFireBase()
-		// i'll get dict
-		
-		//newContact.givenName = ContactFromFireBase["name"]
-		//newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:ContactFromFireBase["number"]))]
-		//let email = CNLabeledValue(label:CNLabelWork, value: ContatcFromFireBase["email"])
-		//newContact.emailAddresses = [workEmail]
+		newContact.givenName = newContactCreated.name
+		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:newContactCreated.phone))]
+//		let email = CNLabeledValue(label:CNLabelWork, value: " ")
+//		newContact.emailAddresses = [email]
 		
 	}
 	
 	func saveNewContact() {
-//		let store = CNContactStore()
-//		let request = CNSaveRequest()
-//		request.add(newContact, toContainerWithIdentifier: nil)
-//		do {
-//			try store.execute(request)
-//		} catch let error{
-//			print("Error: \(error.localizedDescription)")
-//		}
+		let store = CNContactStore()
+		let request = CNSaveRequest()
+		request.add(newContact, toContainerWithIdentifier: nil)
+		do {
+			try store.execute(request)
+		} catch let error{
+			print("Error: \(error.localizedDescription)")
+		}
 		print("saved new contact!")
 	}
 	
