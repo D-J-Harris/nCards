@@ -25,13 +25,6 @@ class ContainerViewController: UIViewController {
 		self.addChildViewController(left)
 		self.scroll.addSubview(left.view)
 		self.didMove(toParentViewController: self)
-		left.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-		left.view.leadingAnchor.constraint(equalTo: scroll.layoutMarginsGuide.leadingAnchor)
-		left.view.trailingAnchor.constraint(equalTo: scroll.layoutMarginsGuide.trailingAnchor)
-		left.view.topAnchor.constraint(equalTo: scroll.layoutMarginsGuide.topAnchor)
-		left.view.bottomAnchor.constraint(equalTo: scroll.layoutMarginsGuide.bottomAnchor)
-		
-		// swift programmatically constraints for each view
 		
 		let middle = self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CustomCameraViewController
 		self.addChildViewController(middle)
