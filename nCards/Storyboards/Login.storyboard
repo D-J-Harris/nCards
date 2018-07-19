@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tsv-jI-DWl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tsv-jI-DWl">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,7 +106,7 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-Tp-T6w">
-                                        <rect key="frame" x="77.666666666666686" y="63" width="220" height="274"/>
+                                        <rect key="frame" x="77.666666666666686" y="103" width="220" height="194"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-xV-EqF">
                                                 <rect key="frame" x="10" y="0.0" width="200" height="30"/>
@@ -126,17 +126,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Position" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvG-AL-5sy">
-                                                <rect key="frame" x="10" y="160" width="200" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="b2k-eb-BVP"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLb-lj-VYl">
-                                                <rect key="frame" x="0.0" y="240" width="220" height="34"/>
+                                                <rect key="frame" x="0.0" y="160" width="220" height="34"/>
                                                 <color key="backgroundColor" red="0.4484784785" green="0.4259513244" blue="0.42173349719999997" alpha="0.38131421230000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="PoI-Oj-3gz"/>
@@ -192,7 +183,6 @@
                     </view>
                     <connections>
                         <outlet property="companyTextField" destination="c73-Bs-38o" id="Jrg-Gs-7b9"/>
-                        <outlet property="currentPositionTextField" destination="tvG-AL-5sy" id="eRI-De-eBN"/>
                         <outlet property="phoneNumberTextField" destination="1Do-xV-EqF" id="gP4-cE-cIg"/>
                     </connections>
                 </viewController>

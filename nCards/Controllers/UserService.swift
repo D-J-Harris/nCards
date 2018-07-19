@@ -22,10 +22,9 @@ struct UserService {
         })
     }
     //CREATE
-    static func create(_ firUser: FIRUser, phoneNumber: String, company: String, currentPosition: String ,completion: @escaping (Contact?) -> Void) {
+    static func create(_ firUser: FIRUser, phoneNumber: String, company: String, completion: @escaping (Contact?) -> Void) {
         let userCardInfo = ["phone": phoneNumber,
                         "company": company,
-                        "currentPosition": currentPosition,
                         "uid": firUser.uid,
                         "contacts": "No contacts yet"] //added this reference
         

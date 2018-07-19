@@ -15,7 +15,6 @@ class ContactFillViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var companyTextField: UITextField!
-    @IBOutlet weak var currentPositionTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -41,9 +40,8 @@ class ContactFillViewController: UIViewController {
             let phone = phoneNumberTextField.text,
             !phone.isEmpty else { return }
         let company = companyTextField.text
-        let currentPosition = currentPositionTextField.text
         
-        UserService.create(firUser, phoneNumber: phone, company: company!, currentPosition: currentPosition!) { (user) in
+        UserService.create(firUser, phoneNumber: phone, company: company!) { (user) in
             guard let user = user else { return }
             
             Contact.setCurrent(user, writeToUserDefaults: true)
