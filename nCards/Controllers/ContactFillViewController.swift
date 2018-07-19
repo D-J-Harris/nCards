@@ -17,9 +17,10 @@ class ContactFillViewController: UIViewController {
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var currentPositionTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -57,3 +58,4 @@ class ContactFillViewController: UIViewController {
         }
     }
 }
+

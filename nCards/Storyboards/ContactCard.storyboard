@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +15,101 @@
             <objects>
                 <viewController storyboardIdentifier="left" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yoa-7L-Lwa" customClass="ContactCardViewController" customModule="nCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Clz-YP-rlz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98424042219999996" green="1" blue="0.67872466249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-NA-YZh">
+                                <rect key="frame" x="10" y="20" width="242" height="50.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iU9-sq-UNI">
+                                <rect key="frame" x="15" y="80" width="345" height="552"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Jvh-QQ-8RX">
+                                        <rect key="frame" x="25" y="25" width="295" height="477"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sml-y3-aU7">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="112.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="First Name Last Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-1i-4B7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="75.5"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6K-EM-XYf">
+                                                        <rect key="frame" x="67.5" y="83.5" width="160.5" height="29"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxN-HT-OJ6">
+                                                <rect key="frame" x="0.0" y="182.5" width="295" height="112"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mkF-rN-Cji">
+                                                <rect key="frame" x="0.0" y="364.5" width="295" height="112.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@something.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueI-2H-SLl">
+                                                        <rect key="frame" x="35" y="0.0" width="225" height="29"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1234567890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl8-6i-dnB">
+                                                        <rect key="frame" x="83" y="36" width="129.5" height="76.5"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mkF-rN-Cji" firstAttribute="height" secondItem="Sml-y3-aU7" secondAttribute="height" id="Ltp-Ds-ndr"/>
+                                            <constraint firstItem="QxN-HT-OJ6" firstAttribute="height" secondItem="Sml-y3-aU7" secondAttribute="height" id="WcJ-zy-hv6"/>
+                                            <constraint firstItem="QxN-HT-OJ6" firstAttribute="width" secondItem="Sml-y3-aU7" secondAttribute="width" id="Z3V-iw-2wH"/>
+                                            <constraint firstItem="mkF-rN-Cji" firstAttribute="width" secondItem="Sml-y3-aU7" secondAttribute="width" id="fCO-8m-aUL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4484784785" green="0.4259513244" blue="0.42173349719999997" alpha="0.38131421230000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jvh-QQ-8RX" secondAttribute="trailing" constant="25" id="IGn-De-9WE"/>
+                                    <constraint firstItem="Jvh-QQ-8RX" firstAttribute="top" secondItem="iU9-sq-UNI" secondAttribute="top" constant="25" id="ME0-4n-SLJ"/>
+                                    <constraint firstItem="Jvh-QQ-8RX" firstAttribute="leading" secondItem="iU9-sq-UNI" secondAttribute="leading" constant="25" id="hpv-7D-N6b"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jvh-QQ-8RX" secondAttribute="bottom" constant="50" id="twg-AT-zMe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.60392156860000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iU9-sq-UNI" firstAttribute="top" secondItem="hDE-3M-NsX" secondAttribute="top" constant="60" id="Qm0-tj-n7A"/>
+                            <constraint firstItem="QcO-NA-YZh" firstAttribute="leading" secondItem="hDE-3M-NsX" secondAttribute="leading" constant="10" id="a0W-pt-F1v"/>
+                            <constraint firstItem="hDE-3M-NsX" firstAttribute="trailing" secondItem="iU9-sq-UNI" secondAttribute="trailing" constant="15" id="g9b-hG-pX9"/>
+                            <constraint firstItem="iU9-sq-UNI" firstAttribute="leading" secondItem="hDE-3M-NsX" secondAttribute="leading" constant="15" id="gmu-PR-X0o"/>
+                            <constraint firstItem="QcO-NA-YZh" firstAttribute="top" secondItem="hDE-3M-NsX" secondAttribute="top" id="rZX-q4-CE9"/>
+                            <constraint firstItem="hDE-3M-NsX" firstAttribute="bottom" secondItem="iU9-sq-UNI" secondAttribute="bottom" constant="35" id="vdb-Gy-l59"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hDE-3M-NsX"/>
                     </view>
+                    <connections>
+                        <outlet property="currentPositionTextLabel" destination="m6K-EM-XYf" id="Cbh-xZ-OLj"/>
+                        <outlet property="emailTextLabel" destination="ueI-2H-SLl" id="lgn-OV-SMI"/>
+                        <outlet property="nameTextLabel" destination="LVI-1i-4B7" id="kdl-GP-k9W"/>
+                        <outlet property="organizationTextLabel" destination="QxN-HT-OJ6" id="2TA-9d-5gG"/>
+                        <outlet property="phoneTextField" destination="Zl8-6i-dnB" id="c3l-h4-ZKm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3u-hs-Bwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-780" y="34"/>
+            <point key="canvasLocation" x="-890.39999999999998" y="36.945812807881772"/>
         </scene>
     </scenes>
 </document>
