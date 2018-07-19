@@ -34,8 +34,12 @@ class ContactAddEditViewController: CNContactViewController {
 	
 	func saveNewContact() {
 		let store = CNContactStore()
-		let saveRequest = CNSaveRequest()
-		saveRequest.add(newContact, toContainerWithIdentifier: nil)
-		try! store.execute(saveRequest)
+		let request = CNSaveRequest()
+		request.add(newContact, toContainerWithIdentifier: nil)
+		do {
+			try store.execute(request)
+		} catch let error{
+			print("Error: \(error.localizedDescription)")
+		}
 	}
 }
