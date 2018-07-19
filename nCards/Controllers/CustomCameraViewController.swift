@@ -44,6 +44,7 @@ class CustomCameraViewController: UIViewController {
 		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
 			self.loadingScreen.alpha = 0
 		}
+        
 	}
 
 	func setupCaptureSession() {
