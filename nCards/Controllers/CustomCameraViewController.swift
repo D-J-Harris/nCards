@@ -24,11 +24,11 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setupCaptureSession()
-		setupDevice()
-		setupInputOutput()
-		setupPreviewLayer()
-		captureSession.startRunning()
+//		setupCaptureSession()
+//		setupDevice()
+//		setupInputOutput()
+//		setupPreviewLayer()
+//		captureSession.startRunning()
 	}
 	
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
@@ -96,7 +96,8 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
 	func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
 		if let imageData = photo.fileDataRepresentation() {
 			self.image = UIImage(data: imageData)
-			// HERE GOES CODE TO OTHER VIEWS
+			print(imageData)
+			
 		}
 	}
 }

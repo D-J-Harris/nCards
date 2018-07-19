@@ -25,6 +25,13 @@ class ContainerViewController: UIViewController {
 		self.addChildViewController(left)
 		self.scroll.addSubview(left.view)
 		self.didMove(toParentViewController: self)
+		left.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+		left.view.leadingAnchor.constraint(equalTo: scroll.layoutMarginsGuide.leadingAnchor)
+		left.view.trailingAnchor.constraint(equalTo: scroll.layoutMarginsGuide.trailingAnchor)
+		left.view.topAnchor.constraint(equalTo: scroll.layoutMarginsGuide.topAnchor)
+		left.view.bottomAnchor.constraint(equalTo: scroll.layoutMarginsGuide.bottomAnchor)
+		
+		// swift programmatically constraints for each view
 		
 		let middle = self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CustomCameraViewController
 		self.addChildViewController(middle)
@@ -34,7 +41,7 @@ class ContainerViewController: UIViewController {
 		var middleFrame: CGRect = middle.view.frame
 		middleFrame.origin.x = self.view.frame.width
 		middle.view.frame = middleFrame
-
+		
 		let right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! LocationsViewControllers
 		self.addChildViewController(right)
 		self.scroll.addSubview(right.view)
@@ -46,6 +53,7 @@ class ContainerViewController: UIViewController {
 		
 		self.scroll.contentSize = CGSize(width: (self.view.frame.width) * 3, height: (self.view.frame.height))
 		self.scroll.contentOffset = CGPoint(x: self.view.frame.width, y:0)
+		
 	}
 	
 	static func scrollToContactCardView() {
