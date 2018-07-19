@@ -14,6 +14,8 @@ class CustomCameraViewController: UIViewController {
 	@IBOutlet weak var cameraButton: UIButton!
 	
 	@IBOutlet weak var loadingScreen: UIView!
+
+	@IBOutlet weak var focusRectangle: UIView!
 	
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
@@ -26,11 +28,13 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		setupCaptureSession()
-//		setupDevice()
-//		setupInputOutput()
-//		setupPreviewLayer()
-//		captureSession.startRunning()
+		focusRectangle.layer.borderColor = UIColor.yellow.cgColor
+		focusRectangle.layer.borderWidth = 1.5
+		setupCaptureSession()
+		setupDevice()
+		setupInputOutput()
+		setupPreviewLayer()
+		captureSession.startRunning()
 	}
 	
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2865CA2100FC6300CE2C65 /* ContactAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2865C92100FC6300CE2C65 /* ContactAddEditViewController.swift */; };
 		0B5E390920FD6DC300F01B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E390820FD6DC300F01B76 /* AppDelegate.swift */; };
 		0B5E390E20FD6DC300F01B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390C20FD6DC300F01B76 /* Main.storyboard */; };
 		0B5E391020FD6DC500F01B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5E390F20FD6DC500F01B76 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2865C92100FC6300CE2C65 /* ContactAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddEditViewController.swift; sourceTree = "<group>"; };
 		0B5E390520FD6DC300F01B76 /* nCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5E390820FD6DC300F01B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B5E390D20FD6DC300F01B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				0B5E393020FE904300F01B76 /* LocationsViewController.swift */,
 				5F64BE7620FE90DD00D06103 /* LoginViewController.swift */,
 				5F3C98AF20FEA2DC00AC6C16 /* ContactFillViewController.swift */,
+				0B2865C92100FC6300CE2C65 /* ContactAddEditViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
+				0B2865CA2100FC6300CE2C65 /* ContactAddEditViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
 				5F3C98B020FEA2DC00AC6C16 /* ContactFillViewController.swift in Sources */,
 				5F64BE7720FE90DD00D06103 /* LoginViewController.swift in Sources */,

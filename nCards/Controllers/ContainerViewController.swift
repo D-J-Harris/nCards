@@ -49,13 +49,14 @@ class ContainerViewController: UIViewController {
 		
 	}
 	
-	static func scrollToContactCardView() {
+	func scrollToContactCardView() {
+		//self.scroll.contentOffset = CGPoint(x: 0, y:0)
 		//self.scroll.contentOffset = CGPoint(x: 0, y:0)
 		print("container recieved contact card tap")
 
 	}
 	
-	static func scrollToLocationsView() {
+	func scrollToLocationsView() {
 		//self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
 		print("container recieved locations tap")
 	}
