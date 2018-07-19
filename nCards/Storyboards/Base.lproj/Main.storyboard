@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-af-wVu">
+                                <rect key="frame" x="50" y="70" width="275" height="412"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jM-ym-PX9">
                                 <rect key="frame" x="16" y="589" width="58" height="58"/>
                                 <constraints>
@@ -51,25 +55,39 @@
                                     <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5Q-S4-DRR"/>
                                 </connections>
                             </button>
+                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dro-z7-zqP">
+                                <rect key="frame" x="82" y="238" width="585" height="137"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="I8s-af-wVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4IT-7A-JqS"/>
                             <constraint firstItem="9jM-ym-PX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7G0-fQ-Ary"/>
+                            <constraint firstItem="Dro-z7-zqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7cI-uv-Upp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RKA-c7-yRB" secondAttribute="bottom" constant="30" id="Ilo-VS-Lpv"/>
+                            <constraint firstItem="RKA-c7-yRB" firstAttribute="top" secondItem="I8s-af-wVu" secondAttribute="bottom" constant="65" id="Lwv-Lh-umg"/>
+                            <constraint firstItem="I8s-af-wVu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="Ovt-sA-jQu"/>
+                            <constraint firstItem="Dro-z7-zqP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="REv-0f-Qp3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hch-4R-vbb" secondAttribute="trailing" constant="16" id="RX1-TU-YvN"/>
                             <constraint firstItem="RKA-c7-yRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAM-Ku-4PU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I8s-af-wVu" secondAttribute="trailing" constant="50" id="bYs-I2-BNs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hch-4R-vbb" secondAttribute="bottom" constant="20" id="e36-Pa-XWK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9jM-ym-PX9" secondAttribute="bottom" constant="20" id="r9N-mp-OEe"/>
+                            <constraint firstAttribute="trailing" secondItem="Dro-z7-zqP" secondAttribute="trailing" id="v8r-UP-cGn"/>
+                            <constraint firstAttribute="bottom" secondItem="Dro-z7-zqP" secondAttribute="bottom" id="vfu-Jp-KdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="RKA-c7-yRB" id="ln3-Dj-vzV"/>
+                        <outlet property="focusRectangle" destination="I8s-af-wVu" id="3ld-hB-d1S"/>
+                        <outlet property="loadingScreen" destination="Dro-z7-zqP" id="m3A-g5-dN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="80.50974512743629" y="32.799999999999997"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="y32-0k-lMf">
