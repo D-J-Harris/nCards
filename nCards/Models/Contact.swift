@@ -14,24 +14,16 @@ class Contact: Codable {
     var name: String = ""
     var uid: String = ""
     var email: String = ""
-    var organization: String = ""
     var phone: String = ""
-    var address: String = ""
-    var geoLocation: Int = 0
     var username: String = ""
-    var currentPosition: String = ""
     
-    init(uid: String, username: String, name: String, email: String, organization: String, phone: String, address: String, geoLocation: Int, currentPosition: String) {
+    init(uid: String, username: String, name: String, email: String, phone: String) {
         
         self.name = name
         self.email = email
-        self.organization = organization
         self.phone = phone
-        self.address = phone
-        self.geoLocation = geoLocation
         self.username = username
         self.uid = uid
-        self.currentPosition = currentPosition
     }
     
     init?(snapshot: DataSnapshot) {
