@@ -15,23 +15,26 @@ import FirebaseUI
 class ContactCardViewController: UIViewController {
 
     @IBOutlet weak var nameTextLabel: UILabel!
-    @IBOutlet weak var currentPositionTextLabel: UILabel!
-    @IBOutlet weak var organizationTextLabel: UILabel!
     @IBOutlet weak var emailTextLabel: UILabel!
     @IBOutlet weak var phoneTextField: UILabel!
-
+    @IBOutlet weak var cardView: UIView!
+    
     let firUser = Auth.auth().currentUser
 
     override func viewDidLoad() {
 		super.viewDidLoad()
+        cardView.layer.cornerRadius = 8.0
+        cardView.layer.shadowColor = UIColor.black.cgColor
+        cardView.layer.shadowOpacity = 0.6
+        cardView.layer.shadowOffset = CGSize(width: -15, height: 20)
+        cardView.clipsToBounds = true
+        
 
         let ref = Database.database().reference().child("users").child((firUser?.uid)!)
 
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             print(snapshot.value)
             let contactAttrs = snapshot.value as? [String: Any]
-            self.currentPositionTextLabel.text = contactAttrs?["currentPosition"] as! String
-            self.organizationTextLabel.text = contactAttrs?["company"] as! String
             self.phoneTextField.text = contactAttrs?["phone"] as! String
         })
 
