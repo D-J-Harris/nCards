@@ -15,7 +15,7 @@ class CustomCameraViewController: UIViewController {
 	@IBOutlet weak var loadingScreen: UIView!
 	@IBOutlet weak var focusRectangle: UIView!
     @IBOutlet weak var promptLabel: UILabel!
-    
+
     var newContact = Contact(uid: "", username: "", name: "", email: "", phone: "") //initialise the newContact that gets passed after photo taken
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
@@ -39,14 +39,31 @@ class CustomCameraViewController: UIViewController {
 		captureSession.startRunning()
 	}
 
+	// MARK: Camera button code and segue
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
-		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
+			self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
 			self.loadingScreen.alpha = 0
+		})
+
+	}
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let identifier = segue.identifier else { return }
+
+		switch identifier {
+		case "toContactAddEdit":
+			print("segue")
+		default:
+			print("Unexpected segue identifier")
 		}
-        
+	}
+
+	@IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+
 	}
 
     //START CAMERA SETUP
@@ -96,10 +113,10 @@ class CustomCameraViewController: UIViewController {
 		captureSession.stopRunning()
 	}
     //END CAMERA SETUP
-    
-    
 
-	// MARK: Transitions between views by scrolling
+
+
+	// MARK: Transitions between views by tapping buttons
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
 		ContainerViewController().scrollToContactCardView()
 	}
@@ -107,7 +124,7 @@ class CustomCameraViewController: UIViewController {
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
 		ContainerViewController().scrollToLocationsView()
 	}
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toContactAddEdit" {
             let vc = segue.destination as! ContactAddEditViewController
