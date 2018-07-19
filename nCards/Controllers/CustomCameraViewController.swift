@@ -101,6 +101,7 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
             let textRecognition = TextRecognition()
             textRecognition.detectTexts(image: self.image) { resultsText in
                 print(resultsText)
+                textRecognition.linguisticTagger(resultsText)
             }
             
             

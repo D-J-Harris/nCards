@@ -24,10 +24,7 @@ class TextRecognition {
         
         //Get instance of VisionTextDetector
         let textDetector = vision.textDetector()
-        
-        //remember to maybe orient UIImage to .up
-        //image.imageOrientation = .up
-        
+
         let image = VisionImage(image: uiimage)
         
         //Start detect
@@ -44,15 +41,29 @@ class TextRecognition {
             
             let testText = features.map { feature in
                 
-                return "Text: \(feature.text)"
+                return "\(feature.text)"
                 
-                }.joined(separator: "\n")
+                }.joined(separator: " ")
             
             self.resultsText = testText
             completion(self.resultsText)
+        } //end detect
+    }
+    
+    func linguisticTagger(_ allWords: String) {
+        let options: NSLinguisticTagger.Options = [.omitWhitespace, .omitPunctuation, .joinNames]
+        let schemes = NSLinguisticTagger.availableTagSchemes(forLanguage: "en")
+        let tagger = NSLinguisticTagger(tagSchemes: schemes, options: Int(options.rawValue))
+        tagger.string = allWords
+        tagger.enumerateTags(in: NSMakeRange(0, (allWords as NSString).length), scheme: NSLinguisticTagScheme.nameTypeOrLexicalClass, options: options) { (tag, tokenRange, _, _) in
+            let token = (allWords as NSString).substring(with: tokenRange)
+            if tag?.rawValue == "OrganizationName" {
+                print("Organisation: \(token)")
+            }
+            if tag?.rawValue == "PersonalName" {
+                print("Name: \(token)")
+            }
         }
-        
-        print(resultsText)
     }
 }
 
