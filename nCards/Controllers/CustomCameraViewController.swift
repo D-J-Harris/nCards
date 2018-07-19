@@ -94,17 +94,25 @@ class CustomCameraViewController: UIViewController {
 
 extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
 	func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-		if let imageData = photo.fileDataRepresentation() {
+		//take photo
+        if let imageData = photo.fileDataRepresentation() {
 			self.image = UIImage(data: imageData)
-			// HERE GOES CODE TO OTHER VIEWS
 
+            //tag and return array of useful info
             let textRecognition = TextRecognition()
             textRecognition.detectTexts(image: self.image) { resultsText in
                 print(resultsText)
-                textRecognition.linguisticTagger(resultsText)
+                let output: [String] = textRecognition.linguisticTagger(resultsText)
+                self.addContactToFirebase(output) //add to firebase under currentUser
             }
-
-
 		}
 	}
+}
+
+extension CustomCameraViewController {
+    func addContactToFirebase(_ contactInfo: [String]) {
+        let newContact = Contact(uid: "", username: "", name: contactInfo[0], email: contactInfo[1], organization: "", phone: contactInfo[2], address: "", geoLocation: 0, currentPosition: "")
+        
+        AddService.addContact(newContact)
+    }
 }

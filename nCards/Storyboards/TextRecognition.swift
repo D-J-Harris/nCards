@@ -51,8 +51,12 @@ class TextRecognition {
         //end detect
     }
     
-    func linguisticTagger(_ input: String) {
+    func linguisticTagger(_ input: String) -> [String] {
         
+        //output will have name, email, phone
+        var output = ["","",""]
+        
+        //Initialisation
         let tagger = NSLinguisticTagger(tagSchemes: [.nameType], options: 0)
         let options: NSLinguisticTagger.Options = [.omitWhitespace, .omitPunctuation, .joinNames]
         let range = NSRange(location: 0, length: input.utf16.count)
@@ -63,24 +67,23 @@ class TextRecognition {
         allWords = input.components(separatedBy: " ")
         
         //Combine numbers whitespaced in cell number
-        for i in 0...allWords.count-1 {
+        for i in 0...allWords.count-2 {
             if numberOfIntInString(string: allWords[i]) > 2 && numberOfIntInString(string: allWords[i+1]) > 2 {
                 allWords[i+1] = allWords[i]+allWords[i+1]
                 allWords[i] = ""
             }
         }
-        
+        //TAGGING BEGINS
         //name and company
         tagger.string = input
         tagger.setOrthography(NSOrthography.defaultOrthography(forLanguage: "en"), range: range)
         tagger.enumerateTags(in: range, unit: .word, scheme: .nameType, options: options) { (tag, tokenRange, stop) in
             if let tag = tag, tags.contains(tag) {
                 let token = (input as NSString).substring(with: tokenRange)
-                if tag.rawValue == "OrganizationName" {
-                    print("Organisation: \(token)")
-                }
+
                 if tag.rawValue == "PersonalName" {
                     print("Name: \(token)")
+                    output[0] = token
                 }
             }
         }
@@ -88,11 +91,16 @@ class TextRecognition {
         for word in allWords {
             if word.contains("@") {
                 print("Email: \(word)")
+                output[1] = word
             }
             if numberOfIntInString(string: word) > 7 {
                 print("Number: \(word)")
+                output[2] = word
             }
         }
+        //TAGGING ENDS
+        return output
+        
     }
     
     //supporting function

@@ -23,6 +23,7 @@
 		5F4A1DF220FEE26D00EF1830 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A1DF120FEE26D00EF1830 /* UserService.swift */; };
 		5F4A1DF420FEF7E100EF1830 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A1DF320FEF7E100EF1830 /* Storyboard+Utility.swift */; };
 		5F64BE7720FE90DD00D06103 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F64BE7620FE90DD00D06103 /* LoginViewController.swift */; };
+		BE49A9112100F6A600B310F9 /* AddService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49A9102100F6A600B310F9 /* AddService.swift */; };
 		BE849FC720FFD3FF002F084E /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE849FC620FFD3FF002F084E /* TextRecognition.swift */; };
 		BECC9CE820FFC455002387ED /* ContactCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC9CE720FFC455002387ED /* ContactCard.storyboard */; };
 		BECC9CEA20FFC483002387ED /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC9CE920FFC483002387ED /* Locations.storyboard */; };
@@ -47,6 +48,7 @@
 		5F4A1DF320FEF7E100EF1830 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "nCards/Controllers/Storyboard+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		5F64BE7620FE90DD00D06103 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B9D2297FA4EC3639CBC7FC4 /* Pods_nCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE49A9102100F6A600B310F9 /* AddService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddService.swift; path = nCards/Storyboards/AddService.swift; sourceTree = SOURCE_ROOT; };
 		BE849FC620FFD3FF002F084E /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextRecognition.swift; path = nCards/Storyboards/TextRecognition.swift; sourceTree = SOURCE_ROOT; };
 		BECC9CE720FFC455002387ED /* ContactCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactCard.storyboard; sourceTree = "<group>"; };
 		BECC9CE920FFC483002387ED /* Locations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				5F4A1DF120FEE26D00EF1830 /* UserService.swift */,
+				BE49A9102100F6A600B310F9 /* AddService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5E393120FE904300F01B76 /* LocationsViewController.swift in Sources */,
+				BE49A9112100F6A600B310F9 /* AddService.swift in Sources */,
 				0B5E392B20FE8FA600F01B76 /* ContainerViewController.swift in Sources */,
 				0B5E392D20FE8FFA00F01B76 /* CustomCameraViewController.swift in Sources */,
 				5F3C98B020FEA2DC00AC6C16 /* ContactFillViewController.swift in Sources */,
