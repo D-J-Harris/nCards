@@ -13,6 +13,10 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Properties
 	@IBOutlet weak var cameraButton: UIButton!
 
+	@IBOutlet weak var loadingScreen: UIView!
+
+	@IBOutlet weak var focusRectangle: UIView!
+
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
 	var frontCamera: AVCaptureDevice?
@@ -24,16 +28,22 @@ class CustomCameraViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        setupCaptureSession()
-        setupDevice()
-        setupInputOutput()
-        setupPreviewLayer()
-        captureSession.startRunning()
+		focusRectangle.layer.borderColor = UIColor.yellow.cgColor
+		focusRectangle.layer.borderWidth = 1.5
+		setupCaptureSession()
+		setupDevice()
+		setupInputOutput()
+		setupPreviewLayer()
+		captureSession.startRunning()
 	}
 
 	@IBAction func cameraButtonTapped(_ sender: UIButton) {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
+		loadingScreen.alpha = 1
+		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+			self.loadingScreen.alpha = 0
+		}
 	}
 
 	func setupCaptureSession() {
@@ -84,11 +94,11 @@ class CustomCameraViewController: UIViewController {
 
 	// MARK: Transitions between views by scrolling
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
-		ContainerViewController.scrollToContactCardView()
+		ContainerViewController().scrollToContactCardView()
 	}
 
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
-		ContainerViewController.scrollToLocationsView()
+		ContainerViewController().scrollToLocationsView()
 	}
 }
 
@@ -116,7 +126,7 @@ extension CustomCameraViewController {
         //random int as String to identify contacts within current user on Firebase (makeshift uid)
         let randomIntAsString = String(arc4random())
         let newContact = Contact(uid: randomIntAsString, username: "", name: contactInfo[0], email: contactInfo[1], organization: "", phone: contactInfo[2], address: "", geoLocation: 0, currentPosition: "")
-        
+
         AddService.addContact(newContact)
         return newContact
     }
