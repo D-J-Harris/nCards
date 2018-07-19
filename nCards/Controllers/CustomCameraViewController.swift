@@ -16,7 +16,7 @@ class CustomCameraViewController: UIViewController {
 	@IBOutlet weak var focusRectangle: UIView!
     @IBOutlet weak var promptLabel: UILabel!
     
-
+    var newContact = Contact(uid: "", username: "", name: "", email: "", phone: "") //initialise the newContact that gets passed after photo taken
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
 	var frontCamera: AVCaptureDevice?
@@ -49,6 +49,7 @@ class CustomCameraViewController: UIViewController {
         
 	}
 
+    //START CAMERA SETUP
 	func setupCaptureSession() {
 		captureSession.sessionPreset = AVCaptureSession.Preset.photo
 	}
@@ -94,6 +95,9 @@ class CustomCameraViewController: UIViewController {
 	func startRunningCaptureSession() {
 		captureSession.stopRunning()
 	}
+    //END CAMERA SETUP
+    
+    
 
 	// MARK: Transitions between views by scrolling
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
@@ -103,7 +107,17 @@ class CustomCameraViewController: UIViewController {
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
 		ContainerViewController().scrollToLocationsView()
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toContactEdit" {  //!!!!!!!!check
+            let vc = segue.destination as! ContactAddEditViewController
+            vc.newContactCreated = newContact
+        }
+    }
 }
+
+
+
 
 extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
     //potentially return new contact here
@@ -118,7 +132,7 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
                 print(resultsText)
                 let output: [String] = textRecognition.linguisticTagger(resultsText)
                 //add to firebase under currentUser
-                let newContact = self.addNewContactToFirebase(output)
+                self.newContact = self.addNewContactToFirebase(output)
             }
 		}
 	}

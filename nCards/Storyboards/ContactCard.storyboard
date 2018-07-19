@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-Fl-hG0">
+                                <rect key="frame" x="20" y="55" width="335" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8I4-3R-JNF">
                                 <rect key="frame" x="15" y="50" width="345" height="587"/>
                                 <subviews>
@@ -63,14 +67,19 @@
                         <color key="backgroundColor" red="0.94509803920000002" green="0.60392156860000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8I4-3R-JNF" firstAttribute="leading" secondItem="hDE-3M-NsX" secondAttribute="leading" constant="15" id="0mL-qg-1OV"/>
+                            <constraint firstItem="hDE-3M-NsX" firstAttribute="trailing" secondItem="Ywe-Fl-hG0" secondAttribute="trailing" constant="20" id="0rt-Hg-c3D"/>
+                            <constraint firstItem="Ywe-Fl-hG0" firstAttribute="leading" secondItem="hDE-3M-NsX" secondAttribute="leading" constant="20" id="Kno-q2-8pe"/>
                             <constraint firstItem="8I4-3R-JNF" firstAttribute="top" secondItem="hDE-3M-NsX" secondAttribute="top" constant="30" id="Lxh-tv-3uy"/>
                             <constraint firstItem="hDE-3M-NsX" firstAttribute="trailing" secondItem="8I4-3R-JNF" secondAttribute="trailing" constant="15" id="Tji-QT-8eG"/>
                             <constraint firstItem="hDE-3M-NsX" firstAttribute="bottom" secondItem="8I4-3R-JNF" secondAttribute="bottom" constant="30" id="h97-52-ReK"/>
+                            <constraint firstItem="Ywe-Fl-hG0" firstAttribute="top" secondItem="hDE-3M-NsX" secondAttribute="top" constant="35" id="r8Q-eu-zbM"/>
+                            <constraint firstItem="hDE-3M-NsX" firstAttribute="bottom" secondItem="Ywe-Fl-hG0" secondAttribute="bottom" constant="35" id="yND-Cl-QKL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hDE-3M-NsX"/>
                     </view>
                     <connections>
-                        <outlet property="cardView" destination="8I4-3R-JNF" id="MPA-xP-m2m"/>
+                        <outlet property="cardView" destination="Ywe-Fl-hG0" id="WZ3-QK-DmF"/>
+                        <outlet property="cardView1" destination="8I4-3R-JNF" id="8dl-Aa-Q0Q"/>
                         <outlet property="emailTextLabel" destination="ueI-2H-SLl" id="lgn-OV-SMI"/>
                         <outlet property="nameTextLabel" destination="LVI-1i-4B7" id="kdl-GP-k9W"/>
                         <outlet property="phoneTextField" destination="Zl8-6i-dnB" id="c3l-h4-ZKm"/>

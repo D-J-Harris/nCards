@@ -13,6 +13,7 @@ import ContactsUI
 class ContactAddEditViewController: CNContactViewController {
 	
 	// MARK: Properties
+    var newContactCreated = Contact(uid: "", username: "", name: "", email: "", phone: "")
 	let newContact = CNMutableContact()
 	
 	// MARK: Methods
