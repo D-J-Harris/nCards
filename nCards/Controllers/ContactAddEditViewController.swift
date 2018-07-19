@@ -26,7 +26,7 @@ class ContactAddEditViewController: CNContactViewController {
 		//fetchContactFromFireBase()
 		// i'll get dict
 		
-		//newContact.givenName = ContactFromFireBase["name"]
+		//newContact.givenName = newContactCreated.name
 		//newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:ContactFromFireBase["number"]))]
 		//let email = CNLabeledValue(label:CNLabelWork, value: ContatcFromFireBase["email"])
 		//newContact.emailAddresses = [workEmail]

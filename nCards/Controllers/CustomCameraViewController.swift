@@ -109,7 +109,7 @@ class CustomCameraViewController: UIViewController {
 	}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toContactEdit" {  //!!!!!!!!check
+        if segue.identifier == "toContactAddEdit" {
             let vc = segue.destination as! ContactAddEditViewController
             vc.newContactCreated = newContact
         }
