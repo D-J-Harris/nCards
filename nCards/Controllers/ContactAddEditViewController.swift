@@ -23,7 +23,6 @@ class ContactAddEditViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setNewContact()
 		//Looks for single or multiple taps.
 		let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
@@ -49,6 +48,7 @@ class ContactAddEditViewController: UIViewController {
 	}
 
 	func saveNewContact() {
+		setNewContact()
 		AddService.updateContact(newContactCreated, name: nameTextField.text!, phone: phoneNumberTextField.text!, email: emailTextField.text!)
 		let store = CNContactStore()
 		let request = CNSaveRequest()
