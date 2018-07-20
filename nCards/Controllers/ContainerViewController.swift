@@ -48,16 +48,16 @@ class ContainerViewController: UIViewController {
 		self.scroll.contentOffset = CGPoint(x: self.view.frame.width, y:0)
 		
 	}
-	
-	func scrollToContactCardView() {
-		//self.scroll.contentOffset = CGPoint(x: 0, y:0)
-		//self.scroll.contentOffset = CGPoint(x: 0, y:0)
-		print("container recieved contact card tap")
-
-	}
-	
-	func scrollToLocationsView() {
-		//self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
-		print("container recieved locations tap")
-	}
 }
+
+//extension ContainerViewController: UIS {
+//    static func scrollToContactCardView() {
+//        scroll.contentOffset = CGPoint(x: 0, y:0)
+//        print("container recieved contact card tap")
+//    }
+//
+//    func scrollToLocationsView() {
+//        //self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
+//        print("container recieved locations tap")
+//    }
+//}
