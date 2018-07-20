@@ -46,29 +46,40 @@ class ContainerViewController: UIViewController {
 
 		self.scroll.contentSize = CGSize(width: (self.view.frame.width) * 3, height: (self.view.frame.height))
 		self.scroll.contentOffset = CGPoint(x: self.view.frame.width, y:0)
+        
+        self.dynamicButtonCreation()
 
 	}
 
-	func scrollToContactCardView() {
-		scroll.contentOffset = CGPoint(x: 0, y:0)
-		print("container recieved contact card tap")
+	@objc func scrollToContactCardView() {
+        self.scroll.setContentOffset(CGPoint(x: 0, y:0), animated: true)
 
 	}
 
-	func scrollToLocationsView() {
-		self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
-		print("container recieved locations tap")
+	@objc func scrollToLocationsView() {
+        self.scroll.setContentOffset(CGPoint(x: self.view.frame.width * 2, y:0), animated: true)
 	}
+    
+    func dynamicButtonCreation() {
+        
+        scroll.isScrollEnabled = true
+        scroll.isUserInteractionEnabled = true
+        
+        //contactCardButton
+        let contactCardButton = UIButton()
+        contactCardButton.tag = 0
+        contactCardButton.frame = CGRect(x: self.view.frame.width + 20, y: self.view.frame.height - 78, width: 58, height: 58)
+        contactCardButton.setImage(#imageLiteral(resourceName: "personal-50"), for: .normal)
+        contactCardButton.addTarget(self, action: #selector(scrollToContactCardView), for: .touchUpInside)
+        scroll.addSubview(contactCardButton)
+        
+        //locationsButton
+        let locationsButton = UIButton()
+        locationsButton.tag = 1
+        locationsButton.frame = CGRect(x: self.view.frame.width * 2 - 78, y: self.view.frame.height - 78, width: 58, height: 58)
+        locationsButton.setImage(#imageLiteral(resourceName: "contacts-50"), for: .normal)
+        locationsButton.addTarget(self, action: #selector(scrollToLocationsView), for: .touchUpInside)
+        scroll.addSubview(locationsButton)
+    }
+    
 }
-
-//extension ContainerViewController: UIS {
-//    static func scrollToContactCardView() {
-//        scroll.contentOffset = CGPoint(x: 0, y:0)
-//        print("container recieved contact card tap")
-//    }
-//
-//    func scrollToLocationsView() {
-//        //self.scroll.contentOffset = CGPoint(x: self.view.frame.width * 2, y:0)
-//        print("container recieved locations tap")
-//    }
-//}
