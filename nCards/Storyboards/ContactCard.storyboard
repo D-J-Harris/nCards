@@ -27,36 +27,36 @@
                                 <rect key="frame" x="15" y="50" width="345" height="587"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TSd-2j-0Wg">
-                                        <rect key="frame" x="25.5" y="164.5" width="294" height="154"/>
+                                        <rect key="frame" x="35.5" y="144.5" width="274.5" height="154"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="First Name Last Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-1i-4B7">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="36"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="30"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@something.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueI-2H-SLl">
-                                                <rect key="frame" x="34.5" y="66" width="225" height="29"/>
+                                                <rect key="frame" x="25" y="66" width="225" height="29"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1234567890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl8-6i-dnB">
-                                                <rect key="frame" x="82.5" y="125" width="129.5" height="29"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                <rect key="frame" x="74" y="125" width="126.5" height="29"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contact Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-NA-YZh">
-                                        <rect key="frame" x="36" y="50" width="273.5" height="44.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Contact Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-NA-YZh">
+                                        <rect key="frame" x="35" y="50" width="275.5" height="44.5"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="37"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nCardsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-OB-slI">
-                                        <rect key="frame" x="100" y="353" width="145" height="142"/>
+                                        <rect key="frame" x="100" y="333" width="145" height="142"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mpG-OB-slI" secondAttribute="height" multiplier="142:139" id="MyN-ta-kwi"/>
                                         </constraints>
@@ -66,10 +66,12 @@
                                 <constraints>
                                     <constraint firstItem="mpG-OB-slI" firstAttribute="top" secondItem="TSd-2j-0Wg" secondAttribute="bottom" constant="35" id="50w-ce-vj4"/>
                                     <constraint firstAttribute="trailing" secondItem="mpG-OB-slI" secondAttribute="trailing" constant="100" id="7vL-Vs-PNe"/>
-                                    <constraint firstItem="TSd-2j-0Wg" firstAttribute="top" secondItem="QcO-NA-YZh" secondAttribute="bottom" constant="70" id="RZ9-rw-mwz"/>
+                                    <constraint firstItem="TSd-2j-0Wg" firstAttribute="top" secondItem="QcO-NA-YZh" secondAttribute="bottom" constant="50" id="RZ9-rw-mwz"/>
+                                    <constraint firstAttribute="trailing" secondItem="QcO-NA-YZh" secondAttribute="trailing" constant="35" id="Ta1-MT-Meg"/>
                                     <constraint firstItem="TSd-2j-0Wg" firstAttribute="centerX" secondItem="8I4-3R-JNF" secondAttribute="centerX" id="Wqr-nd-N9X"/>
                                     <constraint firstItem="QcO-NA-YZh" firstAttribute="top" secondItem="8I4-3R-JNF" secondAttribute="top" constant="50" id="X1s-0e-Fit"/>
                                     <constraint firstItem="QcO-NA-YZh" firstAttribute="centerX" secondItem="8I4-3R-JNF" secondAttribute="centerX" id="fAY-9c-2Qh"/>
+                                    <constraint firstItem="QcO-NA-YZh" firstAttribute="leading" secondItem="8I4-3R-JNF" secondAttribute="leading" constant="35" id="rm2-Ad-ptB"/>
                                     <constraint firstItem="mpG-OB-slI" firstAttribute="centerX" secondItem="8I4-3R-JNF" secondAttribute="centerX" id="ujg-be-zeo"/>
                                     <constraint firstItem="mpG-OB-slI" firstAttribute="centerX" secondItem="8I4-3R-JNF" secondAttribute="centerX" id="vk9-9M-z3Z"/>
                                     <constraint firstItem="mpG-OB-slI" firstAttribute="leading" secondItem="8I4-3R-JNF" secondAttribute="leading" constant="100" id="wXz-mw-v8V"/>
