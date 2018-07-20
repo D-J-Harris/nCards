@@ -60,21 +60,29 @@ struct AddService {
             }
             output = infoDict
         })
-        print("infoDict======\(output)")
+        //print("infoDict======\(output)")
         return output
     }
 	
-//	static func getAllContactDBID(_ currentContact: Contact) -> [String] {
-//		var fullContactsDBID: [String] = []
-//
-//		let ref = Database.database().reference().child("users/\(currentContact.uid)/contacts")
-//
-//
-//	}
+	static func getAllContactDBID(_ currentContact: Contact) -> [String] {
+		var contactsReferenceArray: [String] = []
+
+		let ref = Database.database().reference().child("users/\(currentContact.uid)/contacts")
+		
+		ref.observeSingleEvent(of: .value, with: { (snapshot) in
+			guard let contacts = snapshot.value as? [String] else { return }
+			print("SNAPSHOT-------\(snapshot)")
+			contactsReferenceArray = contacts
+		})
+		print("ARRAY OF RANDOM NUMBERS: \(contactsReferenceArray)")
+		return contactsReferenceArray
+	}
 }
 
 
-
+// Snapshot de contacts (osea los contactos de un user)
+// Convertir eso a un array de Objeto Contacts
+// 
 
 
 
