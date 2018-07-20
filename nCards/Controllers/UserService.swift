@@ -43,4 +43,14 @@ struct UserService {
             })
         }
     }
+    
+    //function to display alerts
+    static func showAlert(on: UIViewController, style: UIAlertControllerStyle, title: String?, message: String?, actions: [UIAlertAction] = [UIAlertAction(title: "Ok", style: .default, handler: nil)], completion: (() -> Swift.Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        for action in actions {
+            alert.addAction(action)
+        }
+        on.present(alert, animated: true, completion: completion)
+    }
+    
 }

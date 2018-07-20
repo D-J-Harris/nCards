@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ContainerViewController: UIViewController {
 
@@ -18,7 +19,6 @@ class ContainerViewController: UIViewController {
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		scroll.showsHorizontalScrollIndicator = false
 
 		let left = self.storyboard?.instantiateViewController(withIdentifier: "left") as! ContactCardViewController
@@ -93,6 +93,33 @@ class ContainerViewController: UIViewController {
         locationsBackButton.setTitleColor(UIColor(displayP3Red: 0.94, green: 0.6, blue: 0.21, alpha: 1), for: .normal)
         locationsBackButton.addTarget(self, action: #selector(scrollCameraView), for: .touchUpInside)
         scroll.addSubview(locationsBackButton)
+        
+        //SignOutButton
+        let SignOutButton = UIButton()
+        SignOutButton.tag = 2
+        SignOutButton.frame = CGRect(x: 20, y: self.view.frame.height - 80, width: 100, height: 30)
+        SignOutButton.setTitle("Sign Out", for: .normal)
+        SignOutButton.setTitleColor(UIColor(displayP3Red: 0.94, green: 0.6, blue: 0.21, alpha: 1), for: .normal)
+        SignOutButton.addTarget(self, action: #selector(handleSignOutButtonTapped), for: .touchUpInside)
+        scroll.addSubview(SignOutButton)
+    }
+    
+    @objc func handleSignOutButtonTapped() {
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
+            do {
+                try Auth.auth().signOut()
+                let loginStoryboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+                let loginVC : UIViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.present(loginVC, animated: true, completion: nil)
+            } catch let err {
+                print("Failed to sign out with error", err)
+                UserService.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        UserService.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
+        
+        
     }
     
 }
