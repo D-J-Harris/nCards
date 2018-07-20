@@ -68,7 +68,7 @@ class ContainerViewController: UIViewController {
         //contactCardButton
         let contactCardButton = UIButton()
         contactCardButton.tag = 0
-        contactCardButton.frame = CGRect(x: self.view.frame.width + 20, y: self.view.frame.height - 78, width: 58, height: 58)
+        contactCardButton.frame = CGRect(x: self.view.frame.width + 20, y: self.view.frame.height - 78, width: 55, height: 58)
         contactCardButton.setImage(#imageLiteral(resourceName: "personal-50"), for: .normal)
         contactCardButton.addTarget(self, action: #selector(scrollToContactCardView), for: .touchUpInside)
         scroll.addSubview(contactCardButton)
@@ -76,7 +76,7 @@ class ContainerViewController: UIViewController {
         //locationsButton
         let locationsButton = UIButton()
         locationsButton.tag = 1
-        locationsButton.frame = CGRect(x: self.view.frame.width * 2 - 78, y: self.view.frame.height - 78, width: 58, height: 58)
+        locationsButton.frame = CGRect(x: self.view.frame.width * 2 - 78, y: self.view.frame.height - 78, width: 55, height: 58)
         locationsButton.setImage(#imageLiteral(resourceName: "contacts-50"), for: .normal)
         locationsButton.addTarget(self, action: #selector(scrollToLocationsView), for: .touchUpInside)
         scroll.addSubview(locationsButton)
