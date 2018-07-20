@@ -25,11 +25,10 @@ class ContactAddEditViewController: UIViewController {
 		super.viewDidLoad()
 		//Looks for single or multiple taps.
 		let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-
 		//Uncomment the line below if you want the tap not not interfere and cancel other interactions.
 		tap.cancelsTouchesInView = false
-
 		view.addGestureRecognizer(tap)
+
 		nameTextField.text = newContactCreated.name
 		phoneNumberTextField.text = newContactCreated.phone
 		emailTextField.text = newContactCreated.email
@@ -42,9 +41,9 @@ class ContactAddEditViewController: UIViewController {
 	}
 
 	func setNewContact() {
-		newContact.givenName = newContactCreated.name
-		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:newContactCreated.phone))]
-		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:newContactCreated.email as NSString)]
+		newContact.givenName = nameTextField.text!
+		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:phoneNumberTextField.text!))]
+		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:emailTextField.text! as NSString)]
 	}
 
 	func saveNewContact() {
