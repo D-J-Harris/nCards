@@ -49,6 +49,8 @@ class CustomCameraViewController: UIViewController {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
+		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
+		})
 
 	}
 
