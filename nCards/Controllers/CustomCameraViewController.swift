@@ -102,9 +102,7 @@ class CustomCameraViewController: UIViewController {
 		captureSession.stopRunning()
 	}
     //END CAMERA SETUP
-
-
-
+	
 	// MARK: Transitions between views by tapping buttons
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
 		ContainerViewController().scrollToContactCardView()
@@ -121,9 +119,6 @@ class CustomCameraViewController: UIViewController {
         }
     }
 }
-
-
-
 
 extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
     //potentially return new contact here
