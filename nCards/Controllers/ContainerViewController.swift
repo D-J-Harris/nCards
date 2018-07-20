@@ -35,7 +35,7 @@ class ContainerViewController: UIViewController {
 		middleFrame.origin.x = self.view.frame.width
 		middle.view.frame = middleFrame
 
-		let right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! LocationsViewControllers
+		let right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! LocationsViewController
 		self.addChildViewController(right)
 		self.scroll.addSubview(right.view)
 		self.didMove(toParentViewController: self)

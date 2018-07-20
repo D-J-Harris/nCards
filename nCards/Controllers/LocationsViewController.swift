@@ -7,10 +7,49 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class LocationsViewControllers: UIViewController {
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
+class LocationsViewController: UIViewController {
+    
+
+    @IBOutlet weak var tableView: UITableView!
+    
+//    var contacts = [Contact]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+//        UserService.contacts(for: Contact.current) { (contacts) in
+//            self.contacts = contacts
+//
+//            self.tableView.reloadData()
+//        }
+        
+        
+    }
+}
+extension LocationsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCellTableViewCell", for: indexPath) as! ContactCellViewController
+        
+        let animalIcons: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        
+        cell.imageIcon.image = UIImage(named: "animal1")
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
 }

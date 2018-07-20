@@ -36,11 +36,11 @@ class CustomCameraViewController: UIViewController {
         promptLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         topLeftArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         bottomRightArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.75)
-		setupCaptureSession()
-		setupDevice()
-		setupInputOutput()
-		setupPreviewLayer()
-		captureSession.startRunning()
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        captureSession.startRunning()
         
 	}
 
