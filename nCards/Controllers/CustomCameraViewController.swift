@@ -36,11 +36,11 @@ class CustomCameraViewController: UIViewController {
         promptLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         topLeftArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         bottomRightArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.75)
-        setupCaptureSession()
-        setupDevice()
-        setupInputOutput()
-        setupPreviewLayer()
-        captureSession.startRunning()
+//        setupCaptureSession()
+//        setupDevice()
+//        setupInputOutput()
+//        setupPreviewLayer()
+//        captureSession.startRunning()
         
 	}
 
@@ -49,9 +49,6 @@ class CustomCameraViewController: UIViewController {
 		let settings = AVCapturePhotoSettings()
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
-		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
-		})
-
 	}
 
 	@IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
@@ -79,14 +76,11 @@ class CustomCameraViewController: UIViewController {
 
 	func setupInputOutput() {
 		do {
-
 			let captureDeviceInput = try AVCaptureDeviceInput(device: currentDevice!)
 			captureSession.addInput(captureDeviceInput)
 			photoOutput = AVCapturePhotoOutput()
 			photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
 			captureSession.addOutput(photoOutput!)
-
-
 		} catch {
 			print(error)
 		}

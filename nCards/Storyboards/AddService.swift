@@ -47,30 +47,28 @@ struct AddService {
 		
 	}
     
-    static func fetchContact(_ currentContact: Contact, contactDBID IDReference: String) -> [String: Any] {
-        var output = [String:String]() //empty dictionary for contactInfo
+    static func getAllContacts(user currentUser: Contact, completion: @escaping ([Contact]) -> Void) {
+        var contactsArray: [Contact] = []
+        let currentUID = currentUser.uid
         
-        let currentUID = currentContact.uid
-        let ref = Database.database().reference().child("users/\(currentUID)/contacts/\(IDReference)")
-        
+        let ref = Database.database().reference().child("users").child(currentUID).child("contacts")
+        print(ref)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let infoDict = snapshot.value as? [String:String]
-                else {
-                    return
+            print(snapshot.children)
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                if let contactInfo = snap.value as? [String:String] {
+                    let fetchedContact =  Contact(uid: "", username: "", name: contactInfo["name"]!, email: contactInfo["email"]! , phone: contactInfo["phone"]!)
+                    contactsArray.append(fetchedContact)
+                }
             }
-            output = infoDict
-        })
-        print("infoDict======\(output)")
-        return output
+            if contactsArray.count > 0 {
+                completion(contactsArray)
+            } else {
+                completion([])
+            }
+        })        
     }
-	
-//	static func getAllContactDBID(_ currentContact: Contact) -> [String] {
-//		var fullContactsDBID: [String] = []
-//
-//		let ref = Database.database().reference().child("users/\(currentContact.uid)/contacts")
-//
-//
-//	}
 }
 
 
