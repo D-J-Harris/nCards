@@ -50,8 +50,6 @@ class CustomCameraViewController: UIViewController {
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
 		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
-			self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
-			self.loadingScreen.alpha = 0
 		})
 
 	}
@@ -139,7 +137,9 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
                 let output: [String] = textRecognition.linguisticTagger(resultsText)
                 //add to firebase under currentUser
                 self.newContact = self.addNewContactToFirebase(output)
-            }
+                
+                self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
+                self.loadingScreen.alpha = 0            }
 		}
 	}
 }

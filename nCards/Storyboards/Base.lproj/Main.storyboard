@@ -83,9 +83,6 @@
                                 <state key="normal" image="circle-camera-100"/>
                                 <connections>
                                     <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5Q-S4-DRR"/>
-                                    <segue destination="WBh-88-2I6" kind="popoverPresentation" identifier="toContactAddEdit" popoverAnchorView="RKA-c7-yRB" id="h5U-7X-9II">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dro-z7-zqP">
@@ -119,6 +116,9 @@
                         <outlet property="loadingScreen" destination="Dro-z7-zqP" id="m3A-g5-dN6"/>
                         <outlet property="promptLabel" destination="MjU-Rl-ERA" id="Gxe-hu-ruA"/>
                         <outlet property="topLeftArrow" destination="j9R-OH-Zwe" id="wrF-oL-cgK"/>
+                        <segue destination="WBh-88-2I6" kind="popoverPresentation" identifier="toContactAddEdit" popoverAnchorView="RKA-c7-yRB" id="hZw-u7-K2m">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
