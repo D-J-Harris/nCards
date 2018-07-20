@@ -60,6 +60,10 @@ class ContainerViewController: UIViewController {
         self.scroll.setContentOffset(CGPoint(x: self.view.frame.width * 2, y:0), animated: true)
 	}
     
+    @objc func scrollCameraView() {
+        self.scroll.setContentOffset(CGPoint(x: self.view.frame.width, y:0), animated: true)
+    }
+    
     func dynamicButtonCreation() {
         
         scroll.isScrollEnabled = true
@@ -80,6 +84,15 @@ class ContainerViewController: UIViewController {
         locationsButton.setImage(#imageLiteral(resourceName: "contacts-50"), for: .normal)
         locationsButton.addTarget(self, action: #selector(scrollToLocationsView), for: .touchUpInside)
         scroll.addSubview(locationsButton)
+        
+        //BackButtonFromLocations
+        let locationsBackButton = UIButton()
+        locationsBackButton.tag = 1
+        locationsBackButton.frame = CGRect(x: self.view.frame.width * 2 + 10, y: 30, width: 55, height: 30)
+        locationsBackButton.setTitle("<Back", for: .normal)
+        locationsBackButton.setTitleColor(UIColor(displayP3Red: 0.94, green: 0.6, blue: 0.21, alpha: 1), for: .normal)
+        locationsBackButton.addTarget(self, action: #selector(scrollCameraView), for: .touchUpInside)
+        scroll.addSubview(locationsBackButton)
     }
     
 }
