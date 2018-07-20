@@ -45,12 +45,11 @@ class ContactAddEditViewController: UIViewController {
 	func setNewContact() {
 		newContact.givenName = newContactCreated.name
 		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:newContactCreated.phone))]
-//		let email = CNLabeledValue(label:CNLabelWork, value: " ")
-//		newContact.emailAddresses = [email]
-
+		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:emailTextField.text! as NSString)]
 	}
 
 	func saveNewContact() {
+		AddService.updateContact(newContactCreated, name: nameTextField.text!, phone: phoneNumberTextField.text!, email: emailTextField.text!)
 		let store = CNContactStore()
 		let request = CNSaveRequest()
 		request.add(newContact, toContainerWithIdentifier: nil)
