@@ -26,6 +26,8 @@ class ContactCardViewController: UIViewController {
 		super.viewDidLoad()
         cardView1.layer.cornerRadius = 8.0
         cardView1.layer.shadowColor = UIColor.black.cgColor
+        cardView1.layer.borderColor = UIColor.black.cgColor
+        cardView1.layer.borderWidth = 2
         cardView.layer.shadowOpacity = 1
         cardView.layer.shadowOffset = CGSize(width: -10, height: 10)
         cardView1.clipsToBounds = true

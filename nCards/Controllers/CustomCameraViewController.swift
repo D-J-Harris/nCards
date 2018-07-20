@@ -15,7 +15,9 @@ class CustomCameraViewController: UIViewController {
 	@IBOutlet weak var loadingScreen: UIView!
 	@IBOutlet weak var focusRectangle: UIView!
     @IBOutlet weak var promptLabel: UILabel!
-
+    @IBOutlet weak var topLeftArrow: UIImageView!
+    @IBOutlet weak var bottomRightArrow: UIImageView!
+    
     var newContact = Contact(uid: "", username: "", name: "", email: "", phone: "") //initialise the newContact that gets passed after photo taken
 	var captureSession = AVCaptureSession()
 	var backCamera: AVCaptureDevice?
@@ -32,11 +34,14 @@ class CustomCameraViewController: UIViewController {
         focusRectangle.layer.cornerRadius = 8
 		focusRectangle.layer.borderWidth = 1.5
         promptLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        topLeftArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        bottomRightArrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.75)
 		setupCaptureSession()
 		setupDevice()
 		setupInputOutput()
 		setupPreviewLayer()
 		captureSession.startRunning()
+        
 	}
 
 	// MARK: Camera button code and segue
@@ -45,8 +50,6 @@ class CustomCameraViewController: UIViewController {
 		photoOutput?.capturePhoto(with: settings, delegate: self)
 		loadingScreen.alpha = 1
 		DispatchQueue.main.asyncAfter(deadline:.now() + 5.0, execute: {
-			self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
-			self.loadingScreen.alpha = 0
 		})
 
 	}
@@ -105,15 +108,15 @@ class CustomCameraViewController: UIViewController {
 	
 	// MARK: Transitions between views by tapping buttons
 	@IBAction func personalContactCardButtonTapped(_ sender: UIButton) {
-		ContainerViewController().scrollToContactCardView()
+
 	}
 
 	@IBAction func locationsButtonTapped(_ sender: UIButton) {
-		ContainerViewController().scrollToLocationsView()
+
 	}
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toContactEdit" {  //!!!!!!!!check
+        if segue.identifier == "toContactAddEdit" {
             let vc = segue.destination as! ContactAddEditViewController
             vc.newContactCreated = newContact
         }
@@ -134,7 +137,9 @@ extension CustomCameraViewController: AVCapturePhotoCaptureDelegate {
                 let output: [String] = textRecognition.linguisticTagger(resultsText)
                 //add to firebase under currentUser
                 self.newContact = self.addNewContactToFirebase(output)
-            }
+                
+                self.performSegue(withIdentifier:"toContactAddEdit",sender: self)
+                self.loadingScreen.alpha = 0            }
 		}
 	}
 }

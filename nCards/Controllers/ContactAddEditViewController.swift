@@ -11,7 +11,7 @@ import Foundation
 import Contacts
 
 class ContactAddEditViewController: UIViewController {
-	
+
 	// MARK: Properties
     var newContactCreated = Contact(uid: "", username: "", name: "", email: "", phone: "")
 	let newContact = CNMutableContact()
@@ -19,7 +19,7 @@ class ContactAddEditViewController: UIViewController {
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var phoneNumberTextField: UITextField!
 	@IBOutlet weak var emailTextField: UITextField!
-	
+
 	// MARK: Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,24 +28,24 @@ class ContactAddEditViewController: UIViewController {
 		//Uncomment the line below if you want the tap not not interfere and cancel other interactions.
 		tap.cancelsTouchesInView = false
 		view.addGestureRecognizer(tap)
-		
+
 		nameTextField.text = newContactCreated.name
 		phoneNumberTextField.text = newContactCreated.phone
 		emailTextField.text = newContactCreated.email
 	}
-	
+
 	//Calls this function when the tap is recognized.
 	@objc func dismissKeyboard() {
 		//Causes the view (or one of its embedded text fields) to resign the first responder status.
 		view.endEditing(true)
 	}
-	
+
 	func setNewContact() {
 		newContact.givenName = nameTextField.text!
 		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:phoneNumberTextField.text!))]
 		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:emailTextField.text! as NSString)]
 	}
-	
+
 	func saveNewContact() {
 		setNewContact()
 		AddService.updateContact(newContactCreated, name: nameTextField.text!, phone: phoneNumberTextField.text!, email: emailTextField.text!)
@@ -59,10 +59,10 @@ class ContactAddEditViewController: UIViewController {
 		}
 		print("saved new contact!")
 	}
-	
+
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let identifier = segue.identifier else { return }
-		
+
 		switch identifier {
 		case "cancel":
 			print("cancel save tapped")
@@ -74,13 +74,3 @@ class ContactAddEditViewController: UIViewController {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
