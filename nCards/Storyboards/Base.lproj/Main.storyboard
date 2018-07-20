@@ -147,14 +147,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9R9-BG-7gf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="473"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Q-5j-5mI">
-                                        <rect key="frame" x="51.5" y="100" width="272" height="68.5"/>
-                                        <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="50"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="kzH-u5-19w">
+                                        <rect key="frame" x="51.5" y="90" width="272" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Q-5j-5mI">
+                                                <rect key="frame" x="0.0" y="0.0" width="272" height="68.5"/>
+                                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="50"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Feel free to edit here!)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-KU-3zk">
+                                                <rect key="frame" x="43.5" y="61.5" width="185.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="quy-w7-7RL">
-                                        <rect key="frame" x="30" y="208.5" width="315" height="126"/>
+                                        <rect key="frame" x="30" y="213" width="315" height="126"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mv7-CJ-02f">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="22"/>
@@ -179,11 +190,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.66274509800000003" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Y0Q-5j-5mI" firstAttribute="centerX" secondItem="9R9-BG-7gf" secondAttribute="centerX" id="3K3-yW-v7L"/>
-                                    <constraint firstItem="quy-w7-7RL" firstAttribute="top" secondItem="Y0Q-5j-5mI" secondAttribute="bottom" constant="40" id="VtR-Ve-1vD"/>
+                                    <constraint firstItem="quy-w7-7RL" firstAttribute="top" secondItem="kzH-u5-19w" secondAttribute="bottom" constant="40" id="NVl-aO-Jqk"/>
+                                    <constraint firstItem="kzH-u5-19w" firstAttribute="centerX" secondItem="9R9-BG-7gf" secondAttribute="centerX" id="TH8-jY-fsr"/>
                                     <constraint firstItem="quy-w7-7RL" firstAttribute="leading" secondItem="9R9-BG-7gf" secondAttribute="leading" constant="30" id="toZ-Jn-RNC"/>
                                     <constraint firstAttribute="trailing" secondItem="quy-w7-7RL" secondAttribute="trailing" constant="30" id="uyn-KQ-S0A"/>
-                                    <constraint firstItem="Y0Q-5j-5mI" firstAttribute="top" secondItem="9R9-BG-7gf" secondAttribute="top" constant="100" id="wS3-UG-ymC"/>
+                                    <constraint firstItem="kzH-u5-19w" firstAttribute="top" secondItem="9R9-BG-7gf" secondAttribute="top" constant="90" id="xb1-95-qLN"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hzw-J9-h1R">

@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Contacts
+import FirebaseDatabase
 
 class ContactAddEditViewController: UIViewController {
 
@@ -59,12 +60,22 @@ class ContactAddEditViewController: UIViewController {
 		}
 		print("saved new contact!")
 	}
+    
+    func deleteContact(_ contact: Contact) {
+        let ref = Database.database().reference().child("users/\(Contact.current.uid)/contacts/\(contact.uid)")
+        ref.removeValue { (error, _) in
+            if let error = error {
+                print(error)
+            }
+        }
+    }
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let identifier = segue.identifier else { return }
 
 		switch identifier {
 		case "cancel":
+            deleteContact(newContactCreated)
 			print("cancel save tapped")
 		case "saveToContacts":
 			saveNewContact()
