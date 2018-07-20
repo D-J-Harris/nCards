@@ -213,10 +213,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hzw-J9-h1R">
-                                <rect key="frame" x="100" y="513" width="175" height="88"/>
+                                <rect key="frame" x="50" y="513" width="275" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paq-iF-t8z">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="34"/>
                                         <color key="backgroundColor" red="0.4484784785" green="0.30613065312430487" blue="0.13857460020573023" alpha="0.38131421230000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Save to contacts">
@@ -227,7 +227,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3m-tb-qM2">
-                                        <rect key="frame" x="0.0" y="54" width="175" height="34"/>
+                                        <rect key="frame" x="0.0" y="54" width="275" height="34"/>
                                         <color key="backgroundColor" red="0.4484784785" green="0.30613065309999998" blue="0.13857460020000001" alpha="0.38131421230000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Cancel">
@@ -250,11 +250,11 @@
                         <constraints>
                             <constraint firstItem="hzw-J9-h1R" firstAttribute="top" secondItem="9R9-BG-7gf" secondAttribute="bottom" constant="40" id="BQJ-SO-mFJ"/>
                             <constraint firstItem="9R9-BG-7gf" firstAttribute="trailing" secondItem="Bde-WH-LFY" secondAttribute="trailing" id="EwR-72-ESt"/>
-                            <constraint firstItem="Bde-WH-LFY" firstAttribute="trailing" secondItem="hzw-J9-h1R" secondAttribute="trailing" constant="100" id="FDa-HR-Kvi"/>
+                            <constraint firstItem="Bde-WH-LFY" firstAttribute="trailing" secondItem="hzw-J9-h1R" secondAttribute="trailing" constant="50" id="FDa-HR-Kvi"/>
                             <constraint firstItem="9R9-BG-7gf" firstAttribute="leading" secondItem="Bde-WH-LFY" secondAttribute="leading" id="YRl-a4-bEE"/>
                             <constraint firstItem="9R9-BG-7gf" firstAttribute="top" secondItem="L2U-RD-1Oh" secondAttribute="top" id="Yhg-Vv-ymI"/>
                             <constraint firstItem="Bde-WH-LFY" firstAttribute="bottom" secondItem="hzw-J9-h1R" secondAttribute="bottom" constant="66" id="ctR-fb-whb"/>
-                            <constraint firstItem="hzw-J9-h1R" firstAttribute="leading" secondItem="Bde-WH-LFY" secondAttribute="leading" constant="100" id="wxU-1p-30y"/>
+                            <constraint firstItem="hzw-J9-h1R" firstAttribute="leading" secondItem="Bde-WH-LFY" secondAttribute="leading" constant="50" id="wxU-1p-30y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bde-WH-LFY"/>
                     </view>
