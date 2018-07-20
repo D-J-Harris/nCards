@@ -22,6 +22,9 @@ class LocationsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         AddService.getAllContacts(user: Contact.current) { (contacts) in
             self.contacts = contacts
             self.tableView.reloadData()
@@ -35,9 +38,8 @@ extension LocationsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.nameTextLabel.text = contacts[indexPath.row].name
         cell.emailTextLabel.text = contacts[indexPath.row].email
         cell.phoneTextLabel.text = contacts[indexPath.row].phone
-        let animalIcons: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         
-        cell.imageIcon.image = UIImage(named: "animal1")
+        cell.imageIcon.image = UIImage(named: "animal\(arc4random_uniform(15) + 1)")
         
         return cell
     }
