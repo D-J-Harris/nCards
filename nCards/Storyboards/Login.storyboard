@@ -106,28 +106,28 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-Tp-T6w">
-                                        <rect key="frame" x="77.666666666666686" y="103" width="220" height="194"/>
+                                        <rect key="frame" x="77.666666666666686" y="111.33333333333331" width="220" height="178"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-xV-EqF">
-                                                <rect key="frame" x="10" y="0.0" width="200" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-xV-EqF">
+                                                <rect key="frame" x="10" y="0.0" width="200" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="UfQ-Jb-zCX"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c73-Bs-38o">
-                                                <rect key="frame" x="10" y="80" width="200" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c73-Bs-38o">
+                                                <rect key="frame" x="10" y="72" width="200" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="be3-6R-Td5"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLb-lj-VYl">
-                                                <rect key="frame" x="0.0" y="160" width="220" height="34"/>
+                                                <rect key="frame" x="0.0" y="144" width="220" height="34"/>
                                                 <color key="backgroundColor" red="0.4484784785" green="0.4259513244" blue="0.42173349719999997" alpha="0.38131421230000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="PoI-Oj-3gz"/>

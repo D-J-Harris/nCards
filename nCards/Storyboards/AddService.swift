@@ -28,6 +28,24 @@ struct AddService {
             }
         }
     }
+	
+	static func updateContact(_ currentContact: Contact, name: String, phone: String, email: String) {
+		let currentUID = Contact.current.uid
+		
+		let ref = Database.database().reference().child("users").child(currentUID).child("contacts").child(currentContact.uid)
+		
+		let userCardInfo = ["phone": phone,
+							"email": email,
+							"name": name]
+		
+		ref.updateChildValues(userCardInfo) { (error, ref) in
+			if let error = error {
+				assertionFailure(error.localizedDescription)
+				return
+			}
+		}
+		
+	}
     
     static func fetchContact(_ currentContact: Contact, contactDBID IDReference: String) -> [String: Any] {
         var output = [String:String]() //empty dictionary for contactInfo
@@ -45,4 +63,23 @@ struct AddService {
         print("infoDict======\(output)")
         return output
     }
+	
+//	static func getAllContactDBID(_ currentContact: Contact) -> [String] {
+//		var fullContactsDBID: [String] = []
+//
+//		let ref = Database.database().reference().child("users/\(currentContact.uid)/contacts")
+//
+//
+//	}
 }
+
+
+
+
+
+
+
+
+
+
+
