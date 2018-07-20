@@ -44,7 +44,7 @@ class ContactAddEditViewController: UIViewController {
 	func setNewContact() {
 		newContact.givenName = newContactCreated.name
 		newContact.phoneNumbers = [CNLabeledValue(label:CNLabelPhoneNumberiPhone, value:CNPhoneNumber(stringValue:newContactCreated.phone))]
-		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:emailTextField.text! as NSString)]
+		newContact.emailAddresses = [CNLabeledValue(label:CNLabelWork, value:newContactCreated.email as NSString)]
 	}
 
 	func saveNewContact() {
